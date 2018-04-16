@@ -1,0 +1,419 @@
+/*==============================================
+[Main stylesheet style.css]
+
+Author:	SINDEVO.COM - Smart Interface Development
+Version:	1.0
+Created:	22 January 2018
+Last updated:	22 January 2018
+Template:	BLIX - Mobile HTML Template
+================================================*/
+
+
+/*
+[Table of Contents]
+
+1. RESET
+2. GENERAL
+3. H TITLES
+4. HEADER AND HEADER NAVIGATION
+5. CUSTOM BUTTONS
+6. LEFT AND RIGHT SLIDE PANELS
+    6-1. USER ACCOUNT SIDEBAR RIGHT
+    6-2. MAIN NAVIGATION SIDEBAR LEFT
+7. PAGES LAYOUT GENERAL
+    7-1. SWIPE SLIDER
+    7-2. FEATURED LISTS
+    7-3. TEAM DESIGN LAYOUT
+    7-4. MUSIC LIST DESIGN LAYOUT
+8. POPUPS
+9. SHOP LAYOUT
+     9-1. SHOP ITEM PAGE 
+     9-2. SHOPPING CART - CECKOUT
+     9-3. SUCCESS PAGE
+10. PHOTO GALLERY
+11. BLOG LAYOUT
+12. FORMS
+      12.1 LOGIN FORM
+      12.2 CONTACT FORM
+13. TABS / ACCORDION / TABLES
+14. MEDIA QUERIES
+*/
+
+
+/*===============================================*/
+
+
+/* 1. RESET		 						 */
+
+
+/*===============================================*/
+
+@import "css/reset.css";
+
+/*===============================================*/
+
+
+/* 2. GENERAL		 						 */
+
+
+/*===============================================*/
+
+html,
+body {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #232323;
+	font-size: 14px;
+	line-height: 1.4;
+	width: 100%;
+	-webkit-text-size-adjust: 100%;
+	overflow: hidden;
+	font-weight: 300;
+}
+
+a {
+	text-decoration: none;
+	color: #484848;
+}
+
+p {
+	padding: 0px;
+	margin: 0px;
+	line-height: 20px;
+}
+
+
+/*===============================================*/
+
+
+/* 3. H TITLES		 						 */
+
+
+/*===============================================*/
+
+
+/*===============================================*/
+
+
+/* 4. HEADER AND HEADER NAVIGATION */
+
+
+/*===============================================*/
+
+
+/* HEADER LEFT */
+
+
+/* HEADER CENTER */
+
+
+/* HEADER RIGHT */
+
+
+/*===============================================*/
+
+
+/* 5. CUSTOM BUTTONS */
+
+
+/*===============================================*/
+
+
+/*===============================================*/
+
+
+/* 6. LEFT AND RIGHT SLIDE PANELS */
+
+
+/*===============================================*/
+
+.panel {
+	z-index: 1000;
+	display: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	position: absolute;
+	width: 300px;
+	top: 0;
+	height: 100%;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transition-duration: 400ms;
+	transition-duration: 400ms;
+	color: #222222;
+}
+
+.panel-right {
+	background-color: #ff1d2b;
+}
+
+
+/* 6-1. USER ACCOUNT SIDEBAR RIGHT */
+
+.user_login_info {
+	padding: 0px;
+}
+
+.user_thumb {
+	width: 100%;
+	margin: auto;
+	position: relative;
+}
+
+.user_thumb img {
+	display: block;
+	max-width: 100%;
+	z-index: 777;
+}
+
+.user_details {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 132px;
+	z-index: 888;
+	background: url(images/trans_black_gradient.png) repeat-x;
+}
+
+.user_details p {
+	padding: 70px 0 0 10px;
+	text-align: left;
+	font-size: 14px;
+	color: #eaca02;
+}
+
+.user_details p span {
+	display: block;
+	font-size: 22px;
+	padding: 5px 0 0 0;
+	color: #ffffff;
+}
+
+.user_avatar {
+	z-index: 999;
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	width: 30%;
+}
+
+.user_avatar img {
+	display: block;
+	max-width: 100%;
+	margin: 10px 0 0 0;
+	border-radius: 50%;
+}
+
+.user-nav {
+	padding: 20px 5% 0 5%;
+	width: 90%;
+}
+
+.user-nav ul {
+	width: 100%;
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	display: block;
+}
+
+.user-nav ul li {
+	width: 90%;
+	list-style: none;
+	padding: 5px 0 10px 0;
+	margin: 0 0 0 5%;
+	display: inline-block;
+	text-align: center;
+	border-bottom: 1px #fd4854 solid;
+}
+
+.user-nav ul li img {
+	display: inline-block;
+	max-width: 12%;
+	float: left;
+}
+
+.user-nav ul li span {
+	display: block;
+	float: left;
+	text-align: left;
+	padding: 5px 0 0 20px;
+}
+
+.user-nav ul li strong {
+	display: block;
+	float: right;
+	text-align: left;
+	margin: 0 5px 0 0;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	background-color: #eaca02;
+	color: #ff1d2b;
+}
+
+.user-nav ul li a {
+	font-size: 14px;
+	font-weight: 300;
+	color: #fff;
+}
+
+
+/* 6-2. MAIN NAVIGATION SIDEBAR LEFT */
+
+
+/* NAVIGATION STYLE UNDERLINE */
+
+
+/* NAVIGATION STYLE 2 ICONS ON ONE ROW WITH BORDER */
+
+
+/* NAVIGATION STYLE 2 ICONS ON ONE ROW WITH BORDER */
+
+
+/*===============================================*/
+
+
+/* 7. PAGES LAYOUT GENERAL */
+
+
+/*===============================================*/
+
+
+/* 7-1. SWIPE SLIDER */
+
+
+/* 7-2. FEATURED LISTS */
+
+
+/* 7-3. TEAM DESIGN LAYOUT */
+
+
+/* 7-4. MUSIC LIST DESIGN LAYOUT */
+
+
+/*===============================================*/
+
+
+/* 8. POPUPS */
+
+
+/*===============================================*/
+
+
+/*===============================================*/
+
+
+/* 9. SHOP LAYOUT */
+
+
+/*===============================================*/
+
+
+/* 9-1. SHOP ITEM PAGE */
+
+
+/* 9-2. SHOPPING CART - CECKOUT */
+
+
+/* 9-3. SUCCESS PAGE */
+
+
+/*===============================================*/
+
+
+/* 10. PHOTO GALLERY */
+
+
+/*===============================================*/
+
+
+/*===============================================*/
+
+
+/* 11. BLOG LAYOUT */
+
+
+/*===============================================*/
+
+
+/*===============================================*/
+
+
+/* 12. FORMS */
+
+
+/*===============================================*/
+
+
+/* 12.1 LOGIN FORM */
+
+
+/* 12.2 CONTACT FORM */
+
+
+/* --------Custom select input----------- */
+
+
+/*===============================================*/
+
+
+/* 13. TABS & ACCORDION & TABLES */
+
+
+/*===============================================*/
+
+
+/* TABLES */
+
+
+/*===============================================*/
+
+
+/* 14. MEDIA QUERIES */
+
+
+/*===============================================*/
+
+
+/* -------------SMALL DESKTOP--------- */
+
+
+/* -------------TABLET PORTRAIT--------- */
+
+
+/* -----------------MOBILE---------------- */
+
+@media screen and (max-width: 680px) {
+	/* 5.1 TOP NAVIGATION AND HEADER */
+	/* HEADER RIGHT */
+	/* PANEL RIGHT AND LEFT */
+	.panel {
+		width: 85%;
+	}
+	.panel.panel-right.panel-reveal {
+		right: -85%;
+	}
+}
+
+
+/* -----------------SMALL MOBILE---------------- */
+
+
+/* -----------------SMALLER MOBILE---------------- */

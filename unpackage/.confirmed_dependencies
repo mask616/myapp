@@ -1,0 +1,30 @@
+{
+  "main.html": {
+    "resources": [
+      "index.html",
+      "pages/index.html"
+    ],
+    "refer": [
+      "contact.html",
+      "index.html",
+      "setting.html",
+      "chat.html",
+      "pages/index.html",
+      "pages/contact.html",
+      "pages/chat.html",
+      "pages/setting.html",
+      "menu.html"
+    ]
+  },
+  "index.html": {
+    "resources": [
+      "pages/main.html"
+    ],
+    "refer": [
+      "pages/contact.html",
+      "pages/info.html",
+      "menu.html",
+      "pages/main.html"
+    ]
+  }
+}
