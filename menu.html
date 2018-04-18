@@ -8,38 +8,106 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-		<link rel="stylesheet" href="css/mui.min.css">
-		<link rel="stylesheet" type="text/css" href="css/menu.css"/>
+		<link rel="stylesheet" href="css/mui.min.css"  /> 
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<!--<link rel="stylesheet" type="text/css" href="css/menu.css"/>-->
 		<style>
-			body, .mui-content {
-				background-color: #333;
-				color: #fff;
+			body,
+			.mui-content {
+				background-color: #efeff4;
+				color: #000000;
 			}
-			header.mui-bar{
+			
+			header.mui-bar {
 				display: none;
 			}
-			.mui-bar-nav~.mui-content{
+			
+			.mui-bar-nav~.mui-content {
 				padding: 0;
 			}
-			 .title{
-			  	margin: 35px 15px 10px;
-			  }
-			  .title+.content{
-			  	margin: 10px 15px 35px;
-			  	color: #bbb;
-			  	text-indent: 1em;
-			  	font-size: 14px;
-			  	line-height: 24px;
-			  }
-			  .mui-table-view{
-			  	margin-bottom: 35px;
-			  }
+			
+			.title {
+				margin: 35px 15px 10px;
+			}
+			
+			.title+.content {
+				margin: 10px 15px 35px;
+				color: #bbb;
+				text-indent: 1em;
+				font-size: 14px;
+				line-height: 24px;
+			}
+			
+			.mui-table-view {
+				margin-bottom: 35px;
+			}
+			
+			.user_login_info {
+				padding: 0px;
+			}
+			
+			.user_thumb {
+				width: 100%;
+				margin: auto;
+				position: relative;
+			}
+			
+			.user_thumb img {
+				display: block;
+				max-width: 100%;
+				z-index: 777;
+			}
+			
+			.user_details {
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				width: 100%;
+				height: 132px;
+				z-index: 888;
+				background: url(images/trans_black_gradient.png) repeat-x;
+			}
+			
+			.user_details p {
+				padding: 10px 0 0 10px;
+				text-align: left;
+				font-size: 14px;
+				color: #eaca02;
+			}
+			.user_details p:after {
+				padding: 0 0 0 20px;
+				text-align: left;
+				font-size: 14px;
+				color: #eaca02;
+			}
+			.user_details p span {
+				display: block;
+				font-size: 22px;
+				padding: 5px 0 0 0;
+				color: #ffffff;
+			}
+			
+			.user_avatar {
+				z-index: 999;
+				position: absolute;
+				bottom: 60px;
+				right: 50px;
+				width: 30%;
+			}
+			
+			.user_avatar img {
+				display: block;
+				max-width: 100%;
+				margin: 20px 0 0 0;
+				border-radius: 50%;
+			}
 		</style>
 	</head>
+
 	<body>
 		<div class="mui-content">
-			<div class="title">侧滑导航</div>
-				<div class="content">
+			<!--<div class="title"></div>-->
+			<div class="content">
 				<!--	这是侧滑菜单示例，你可以在这里放置任何内容；关闭侧滑菜单有多种方式：
 					1.在手机屏幕任意位置快速向左滑动(swipe)；
 					2.点击本侧滑菜单页之外的任意位置;
@@ -51,62 +119,83 @@
 						<button id="close-btn" type="button" class="mui-btn mui-btn-danger mui-btn-block" style="padding: 5px 20px;">关闭侧滑菜单</button>
 					</p>
 				-->
+				<div class="user_thumb">
+					<img src="images/page_photo.jpg" alt="" title="" />
+					<div class="user_avatar"><img src="images/avatar.jpg" alt="" title="" /></div>
+					<div class="user_details">
+						<p>Welcome, <span>Mask</span></p>
+						<p class="">唯有梦想和好姑娘不可辜负</p>
+					</div>
+					<div class="user_avatar"><img src="images/avatar.jpg" alt="" title="" /></div>
 				</div>
-				<div class="title" style="margin-bottom: 25px;">侧滑列表示例</div>
-				<ul class="mui-table-view mui-table-view-chevron mui-table-view-inverted">
-					<li class="mui-table-view-cell">
-						<a class="mui-navigate-right">
-							Item 1
-						</a>
-					</li>
-					<li class="mui-table-view-cell">
-						<a class="mui-navigate-right">
-							Item 2
-						</a>
-					</li>
-					<li class="mui-table-view-cell">
-						<a class="mui-navigate-right">
-							Item 3
-						</a>
-					</li>
-					<li class="mui-table-view-cell">
-						<a class="mui-navigate-right">
-							Item 4
-						</a>
-					</li>
-					<li class="mui-table-view-cell">
-						<a class="mui-navigate-right">
-							Item 5
-						</a>
-					</li>
-					<li class="mui-table-view-cell">
-						<a class="mui-navigate-right">
-							Item 6
-						</a>
-					</li>
-				</ul>
+			</div>
+			<div class="title" style="margin-bottom: 25px;"></div>
+			<ul class="mui-table-view mui-table-view-chevron " > <!--style="background-color :#1891ED"-->
+				<!--mui-table-view-inverted 列表下划线-->
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<span class="mui-icon iconfont icon-tuandui"></span>
+						团队信息
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<span class="mui-icon iconfont icon-xiaolian"></span>
+						增值服务
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<span class="mui-icon iconfont icon-anquan"></span>
+						修改密码
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<span class="mui-icon iconfont icon-youxiang"></span>
+						联系我们
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<span class="mui-icon iconfont icon-shezhi"></span>
+						设&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;置
+					</a>
+				</li>
+				<!--<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<span class="mui-icon iconfont icon-daichuli"></span>
+						Item 6
+					</a>
+				</li>-->
+			</ul>
 		</div>
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript" charset="utf-8">
 			mui.init({
-				keyEventBind: {
-					backbutton: false,
-					menubutton: false
+					keyEventBind: {
+						backbutton: false,
+						menubutton: false
+					}
 				}
-			});
+
+			);
 			//获得侧滑主窗口webview对象
 			var main = null;
-			mui.plusReady(function () {
-				main = plus.webview.currentWebview().opener();
-			})
-			function closeMenu () {
-				mui.fire(main,"menu:swipeleft");
+			mui.plusReady(function() {
+					main = plus.webview.currentWebview().opener();
+				}
+
+			)
+			function closeMenu() {
+				mui.fire(main, "menu:swipeleft");
 			}
+
 			//优化显示出来的侧滑菜单，只需监听该菜单的左滑事件，然后将其关闭即可；在菜单上右滑，不做任何操作；
-			window.addEventListener("swipeleft",closeMenu);  
+			window.addEventListener("swipeleft", closeMenu);
 			//document.getElementById("close-btn").addEventListener('tap',closeMenu);
 			mui.menu = closeMenu;
 		</script>
-</body>
+	</body>
 
 </html>
