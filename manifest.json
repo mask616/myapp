@@ -29,15 +29,11 @@
         "Events": {
             "description": "应用扩展事件"
         },
-        "Messaging": {
-            "description": "访问通讯能力"
-        },
+        "Messaging": {},
         "Maps": {
             "description": "管理地图插件"
         },
-        "Speech": {
-            "description": "管理语音识别插件"
-        }
+        "Speech": {},"Push":{},"Share":{},"OAuth":{},"Payment":{},"Statistic":{}
 	},
 	"plus": {
 		"splashscreen": {
@@ -60,7 +56,7 @@
 				"keystore": "",/*Android应用打包使用的密钥库文件*/
 				"password": "",/*Android应用打包使用密钥库中证书的密码*/
 				"aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
-				"permissions": ["<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>","<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>","<uses-permission android:name=\"android.permission.VIBRATE\"/>","<uses-permission android:name=\"android.permission.READ_LOGS\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-feature android:name=\"android.hardware.camera.autofocus\"/>","<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.CAMERA\"/>","<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>","<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>","<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>","<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>","<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>","<uses-permission android:name=\"android.permission.CALL_PHONE\"/>","<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>","<uses-feature android:name=\"android.hardware.camera\"/>","<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>","<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"]
+				"permissions": ["<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>","<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>","<uses-permission android:name=\"android.permission.VIBRATE\"/>","<uses-permission android:name=\"android.permission.READ_LOGS\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-feature android:name=\"android.hardware.camera.autofocus\"/>","<uses-permission  android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>","<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.RECEIVE_BOOT_COMPLETED\"/>","<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.CAMERA\"/>","<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>","<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>","<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>","<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.SEND_SMS\"/>","<uses-permission android:name=\"android.permission.INTERNET\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>","<uses-permission android:name=\"android.permission.CALL_PHONE\"/>","<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>","<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>","<uses-feature android:name=\"android.hardware.camera\"/>","<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>","<uses-permission android:name=\"android.permission.RECEIVE_USER_PRESENT\"/>","<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>","<uses-permission android:name=\"android.permission.WRITE_SMS\"/>","<uses-permission android:name=\"android.permission.READ_SMS\"/>"]
 			},
 			"orientation": ["portrait-primary", "portrait-secondary"],/*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
 			"icons": {
@@ -124,48 +120,143 @@
 					"xxhdpi": ""
 				}
 			}
-		}
+		},"ads":{"rp":false,"splash":false,"push":false},"adid":""
 	},
 	"dependencies": {
-		"pages": {
-			"main.html": {
-				"resources": [
-					"index.html",
-					"pages/index.html"
-				],
-				"refer": [
-					"contact.html",
-					"setting.html",
-					"chat.html",
-					"pages/contact.html",
-					"pages/chat.html",
-					"pages/setting.html",
-					"menu.html"
-				],
-				"priority": 0
-			},
-			"index.html": {
-				"resources": [
-					"pages/main.html"
-				],
-				"refer": [
-					"pages/contact.html",
-					"pages/info.html",
-					"menu.html"
-				],
-				"priority": 0
-			}
-		},
-		"idle": {
-			"resources": [
-				"home.html",
-				"js/mui.min.js",
-				"pullrefresh.html",
-				"fonts/mui.ttf",
-				"css/mui.min.css",
-				"js/mui.js",
-				"css/mui.css"
-			]
-		}
+	  "pages": {
+	    "main.html": {
+	      "resources": [
+	        "index.html",
+	        "pages/index.html"
+	      ],
+	      "refer": [
+	        "contact.html",
+	        "setting.html",
+	        "chat.html",
+	        "pages/contact.html",
+	        "pages/chat.html",
+	        "pages/setting.html",
+	        "menu.html"
+	      ],
+	      "priority": 0
+	    },
+	    "index.html": {
+	      "resources": [
+	        "pages/main.html",
+	        "css/mui.min.css",
+	        "fonts/mui.ttf",
+	        "fonts/iconfont.ttf",
+	        "css/iconfont.css",
+	        "js/mui.min.js"
+	      ],
+	      "refer": [
+	        "pages/contact.html",
+	        "pages/info.html",
+	        "menu.html",
+	        "pages/main.html"
+	      ],
+	      "priority": 0
+	    },
+	    "pages/main.html": {
+	      "href": "pages/main.html",
+	      "resources": [
+	        "js/mui.min.js",
+	        "css/mui.min.css",
+	        "fonts/mui.ttf",
+	        "fonts/iconfont.ttf",
+	        "css/iconfont.css"
+	      ],
+	      "priority": 0
+	    },
+	    "menu.html": {
+	      "href": "menu.html",
+	      "resources": [
+	        "css/mui.min.css",
+	        "fonts/mui.ttf",
+	        "fonts/iconfont.ttf",
+	        "css/iconfont.css",
+	        "images/trans_black_gradient.png",
+	        "js/mui.min.js",
+	        "images/page_photo.jpg",
+	        "images/avatar.jpg"
+	      ],
+	      "priority": 1
+	    },
+	    "pages/contact.html": {
+	      "href": "pages/contact.html",
+	      "resources": [
+	        "js/mui.min.js",
+	        "css/mui.css",
+	        "fonts/mui.ttf",
+	        "images/icon-boy_gaitubao_com_39x39.png",
+	        "images/icon-girl_gaitubao_com_39x39.png"
+	      ],
+	      "priority": 2
+	    },
+	    "pages/info.html": {
+	      "href": "pages/info.html",
+	      "resources": [
+	        "js/mui.min.js",
+	        "css/mui.min.css",
+	        "fonts/mui.ttf",
+	        "fonts/iconfont.ttf",
+	        "css/iconfont.css"
+	      ],
+	      "priority": 3
+	    }
+	  },
+	  "idle": {
+	    "resources": [
+	      "images/icon/white/bike.png",
+	      "images/icon/white/mobile.png",
+	      "images/icon/white/categories.png",
+	      "images/cbd.jpg",
+	      "images/icon/white/love.png",
+	      "images/icon/white/music.png",
+	      "images/icon/white/users.png",
+	      "images/muwu.jpg",
+	      "images/icon/white/settings.png",
+	      "images/icon/white/food.png",
+	      "images/icon/white/message.png",
+	      "images/icon/white/user.png",
+	      "images/shuijiao.jpg",
+	      "images/icon-girl_gaitubao_com_32x32.png",
+	      "images/icon/white/rocket.png",
+	      "images/icon/white/bus.png",
+	      "images/icon/white/contact.png",
+	      "images/icon/white/lock.png",
+	      "LICENSE",
+	      "images/icon/white/drink.png",
+	      "pages/pullrefresh.html",
+	      "images/logo.png",
+	      "images/icon/white/video.png",
+	      "images/icon/white/form.png",
+	      "images/60x60.gif",
+	      "images/icon/white/shop.png",
+	      "js/mui.js",
+	      "images/login-1.png",
+	      "images/icon/white/back.png",
+	      "README.md",
+	      "images/icon/white/car.png",
+	      "images/icon/white/tables.png",
+	      "images/icon/white/features.png",
+	      "images/icon/white/cart.png",
+	      "images/icon/white/briefcase.png",
+	      "images/icon-boy_gaitubao_com_32x32.png",
+	      "css/menu.css",
+	      "images/icon/white/photos.png",
+	      "images/icon/white/twitter.png",
+	      "images/icon/white/menu.png",
+	      "images/icon/white/phone.png",
+	      "images/icon/white/gift.png",
+	      "images/qrcode.png",
+	      "images/yuantiao.jpg",
+	      "images/icon-boy.png",
+	      "images/icon/white/home.png",
+	      "images/icon/white/orders.png",
+	      "images/icon-girl.png",
+	      "images/icon/white/blog.png"
+	    ]
+	  }
 	}
 }

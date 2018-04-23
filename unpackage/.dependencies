@@ -1,1 +1,61 @@
-null
+{
+  "pages/main.html": {
+    "href": "pages/main.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/iconfont.ttf",
+      "css/iconfont.css"
+    ],
+    "priority": 0
+  },
+  "menu.html": {
+    "href": "menu.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/iconfont.ttf",
+      "css/iconfont.css",
+      "images/trans_black_gradient.png",
+      "js/mui.min.js",
+      "images/page_photo.jpg",
+      "images/avatar.jpg"
+    ],
+    "priority": 1
+  },
+  "pages/contact.html": {
+    "href": "pages/contact.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.css",
+      "fonts/mui.ttf",
+      "images/icon-boy_gaitubao_com_39x39.png",
+      "images/icon-girl_gaitubao_com_39x39.png"
+    ],
+    "priority": 2
+  },
+  "pages/info.html": {
+    "href": "pages/info.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/iconfont.ttf",
+      "css/iconfont.css"
+    ],
+    "priority": 3
+  },
+  "index.html": {
+    "href": "index.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/iconfont.ttf",
+      "css/iconfont.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  }
+}

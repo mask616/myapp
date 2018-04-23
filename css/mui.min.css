@@ -1760,7 +1760,7 @@ input[type=submit]:enabled:active {
 	margin-bottom: 0;
 	padding-left: 0;
 	list-style: none;
-	background-color: #fff
+	background-color: #FFFFFF
 }
 
 .mui-table-view:after {
@@ -1768,7 +1768,7 @@ input[type=submit]:enabled:active {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	height: 1px;
+	height: 2.0px;
 	content: '';
 	-webkit-transform: scaleY(.5);
 	transform: scaleY(.5);
@@ -2279,13 +2279,14 @@ input[type=submit]:enabled:active {
 	padding: 10px 0 0 14px;
 	text-align: center;
 	vertical-align: middle;
-	background: 0 0
+	background: 0 0;
+	background-color: 
 }
 
 .mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-object {
 	width: 100%;
 	max-width: 100%;
-	height: auto
+	height: auto;
 }
 
 .mui-table-view.mui-grid-view .mui-table-view-cell>a:not(.mui-btn) {
@@ -2299,10 +2300,10 @@ input[type=submit]:enabled:active {
 
 .mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body {
 	font-size: 15px;
-	line-height: 15px;
+	line-height: 25px;
 	display: block;
 	width: 100%;
-	height: 15px;
+	height: 40px;
 	margin-top: 8px;
 	text-overflow: ellipsis;
 	color: #333
@@ -4795,4 +4796,8 @@ body>.mui-progressbar {
 	width: 100%;
 	height: 100%;
 	border: 0
+}
+
+.main-ul-color{
+	background-color: #F2F2F2;
 }

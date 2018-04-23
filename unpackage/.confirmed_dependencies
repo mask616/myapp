@@ -18,7 +18,10 @@
   },
   "index.html": {
     "resources": [
-      "pages/main.html"
+      "pages/main.html",
+      "css/mui.min.css",
+      "css/iconfont.css",
+      "js/mui.min.js"
     ],
     "refer": [
       "pages/contact.html",
@@ -26,5 +29,49 @@
       "menu.html",
       "pages/main.html"
     ]
+  },
+  "pages/main.html": {
+    "href": "pages/main.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/iconfont.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "menu.html": {
+    "href": "menu.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/iconfont.css",
+      "images/trans_black_gradient.png",
+      "js/mui.min.js",
+      "images/page_photo.jpg",
+      "images/avatar.jpg"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "pages/contact.html": {
+    "href": "pages/contact.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.css",
+      "images/icon-boy_gaitubao_com_39x39.png",
+      "images/icon-girl_gaitubao_com_39x39.png"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "pages/info.html": {
+    "href": "pages/info.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/iconfont.css"
+    ],
+    "refer": [],
+    "priority": 0
   }
 }
