@@ -123,140 +123,142 @@
 		},"ads":{"rp":false,"splash":false,"push":false},"adid":""
 	},
 	"dependencies": {
-	  "pages": {
-	    "main.html": {
-	      "resources": [
-	        "index.html",
-	        "pages/index.html"
-	      ],
-	      "refer": [
-	        "contact.html",
-	        "setting.html",
-	        "chat.html",
-	        "pages/contact.html",
-	        "pages/chat.html",
-	        "pages/setting.html",
-	        "menu.html"
-	      ],
-	      "priority": 0
-	    },
-	    "index.html": {
-	      "resources": [
-	        "pages/main.html",
-	        "css/mui.min.css",
-	        "fonts/mui.ttf",
-	        "fonts/iconfont.ttf",
-	        "css/iconfont.css",
-	        "js/mui.min.js"
-	      ],
-	      "refer": [
-	        "pages/contact.html",
-	        "pages/info.html",
-	        "menu.html",
-	        "pages/main.html"
-	      ],
-	      "priority": 0
-	    },
-	    "pages/main.html": {
-	      "href": "pages/main.html",
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/mui.min.css",
-	        "fonts/mui.ttf",
-	        "fonts/iconfont.ttf",
-	        "css/iconfont.css"
-	      ],
-	      "priority": 0
-	    },
-	    "menu.html": {
-	      "href": "menu.html",
-	      "resources": [
-	        "css/mui.min.css",
-	        "fonts/mui.ttf",
-	        "fonts/iconfont.ttf",
-	        "css/iconfont.css",
-	        "images/trans_black_gradient.png",
-	        "js/mui.min.js",
-	        "images/page_photo.jpg",
-	        "images/avatar.jpg"
-	      ],
-	      "priority": 1
-	    },
-	    "pages/contact.html": {
-	      "href": "pages/contact.html",
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/mui.css",
-	        "fonts/mui.ttf",
-	        "images/icon-boy_gaitubao_com_39x39.png",
-	        "images/icon-girl_gaitubao_com_39x39.png"
-	      ],
-	      "priority": 2
-	    },
-	    "pages/info.html": {
-	      "href": "pages/info.html",
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/mui.min.css",
-	        "fonts/mui.ttf",
-	        "fonts/iconfont.ttf",
-	        "css/iconfont.css"
-	      ],
-	      "priority": 3
-	    }
-	  },
-	  "idle": {
-	    "resources": [
-	      "images/icon/white/bike.png",
-	      "images/icon/white/mobile.png",
-	      "images/icon/white/categories.png",
-	      "images/cbd.jpg",
-	      "images/icon/white/love.png",
-	      "images/icon/white/music.png",
-	      "images/icon/white/users.png",
-	      "images/muwu.jpg",
-	      "images/icon/white/settings.png",
-	      "images/icon/white/food.png",
-	      "images/icon/white/message.png",
-	      "images/icon/white/user.png",
-	      "images/shuijiao.jpg",
-	      "images/icon-girl_gaitubao_com_32x32.png",
-	      "images/icon/white/rocket.png",
-	      "images/icon/white/bus.png",
-	      "images/icon/white/contact.png",
-	      "images/icon/white/lock.png",
-	      "LICENSE",
-	      "images/icon/white/drink.png",
-	      "pages/pullrefresh.html",
-	      "images/logo.png",
-	      "images/icon/white/video.png",
-	      "images/icon/white/form.png",
-	      "images/60x60.gif",
-	      "images/icon/white/shop.png",
-	      "js/mui.js",
-	      "images/login-1.png",
-	      "images/icon/white/back.png",
-	      "README.md",
-	      "images/icon/white/car.png",
-	      "images/icon/white/tables.png",
-	      "images/icon/white/features.png",
-	      "images/icon/white/cart.png",
-	      "images/icon/white/briefcase.png",
-	      "images/icon-boy_gaitubao_com_32x32.png",
-	      "css/menu.css",
-	      "images/icon/white/photos.png",
-	      "images/icon/white/twitter.png",
-	      "images/icon/white/menu.png",
-	      "images/icon/white/phone.png",
-	      "images/icon/white/gift.png",
-	      "images/qrcode.png",
-	      "images/yuantiao.jpg",
-	      "images/icon-boy.png",
-	      "images/icon/white/home.png",
-	      "images/icon/white/orders.png",
-	      "images/icon-girl.png",
-	      "images/icon/white/blog.png"
-	    ]
-	  }
+		"pages": {
+			"main.html": {
+				"resources": [
+					"index.html",
+					"pages/index.html"
+				],
+				"refer": [
+					"contact.html",
+					"setting.html",
+					"chat.html",
+					"pages/contact.html",
+					"pages/chat.html",
+					"pages/setting.html",
+					"menu.html"
+				],
+				"priority": 0
+			},
+			"index.html": {
+				"resources": [
+					"pages/main.html",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"fonts/iconfont.ttf",
+					"css/iconfont.css",
+					"js/mui.min.js"
+				],
+				"refer": [
+					"pages/contact.html",
+					"pages/info.html",
+					"menu.html"
+				],
+				"priority": 0
+			},
+			"pages/main.html": {
+				"href": "pages/main.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"fonts/iconfont.ttf",
+					"css/iconfont.css"
+				],
+				"priority": 0
+			},
+			"menu.html": {
+				"href": "menu.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"fonts/iconfont.ttf",
+					"css/iconfont.css",
+					"images/trans_black_gradient.png",
+					"js/mui.min.js",
+					"images/page_photo.jpg",
+					"images/avatar.jpg"
+				],
+				"priority": 1
+			},
+			"pages/contact.html": {
+				"href": "pages/contact.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.css",
+					"fonts/mui.ttf",
+					"images/icon-boy_gaitubao_com_39x39.png",
+					"images/icon-girl_gaitubao_com_39x39.png"
+				],
+				"priority": 2,
+				"refer": [
+					"pages/contact/chat.html"
+				]
+			},
+			"pages/info.html": {
+				"href": "pages/info.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"fonts/iconfont.ttf",
+					"css/iconfont.css"
+				],
+				"priority": 3
+			}
+		},
+		"idle": {
+			"resources": [
+				"images/icon/white/bike.png",
+				"images/icon/white/mobile.png",
+				"images/icon/white/categories.png",
+				"images/cbd.jpg",
+				"images/icon/white/love.png",
+				"images/icon/white/music.png",
+				"images/icon/white/users.png",
+				"images/muwu.jpg",
+				"images/icon/white/settings.png",
+				"images/icon/white/food.png",
+				"images/icon/white/message.png",
+				"images/icon/white/user.png",
+				"images/shuijiao.jpg",
+				"images/icon-girl_gaitubao_com_32x32.png",
+				"images/icon/white/rocket.png",
+				"images/icon/white/bus.png",
+				"images/icon/white/contact.png",
+				"images/icon/white/lock.png",
+				"LICENSE",
+				"images/icon/white/drink.png",
+				"pages/pullrefresh.html",
+				"images/logo.png",
+				"images/icon/white/video.png",
+				"images/icon/white/form.png",
+				"images/60x60.gif",
+				"images/icon/white/shop.png",
+				"js/mui.js",
+				"images/login-1.png",
+				"images/icon/white/back.png",
+				"README.md",
+				"images/icon/white/car.png",
+				"images/icon/white/tables.png",
+				"images/icon/white/features.png",
+				"images/icon/white/cart.png",
+				"images/icon/white/briefcase.png",
+				"images/icon-boy_gaitubao_com_32x32.png",
+				"css/menu.css",
+				"images/icon/white/photos.png",
+				"images/icon/white/twitter.png",
+				"images/icon/white/menu.png",
+				"images/icon/white/phone.png",
+				"images/icon/white/gift.png",
+				"images/qrcode.png",
+				"images/yuantiao.jpg",
+				"images/icon-boy.png",
+				"images/icon/white/home.png",
+				"images/icon/white/orders.png",
+				"images/icon-girl.png",
+				"images/icon/white/blog.png"
+			]
+		}
 	}
 }

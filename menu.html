@@ -133,32 +133,32 @@
 			<ul class="mui-table-view mui-table-view-chevron " > <!--style="background-color :#1891ED"-->
 				<!--mui-table-view-inverted 列表下划线-->
 				<li class="mui-table-view-cell">
-					<a class="mui-navigate-right">
-						<span class="mui-icon iconfont icon-tuandui"></span>
+					<a class="mui-navigate-right menu">
+						<span class="mui-icon iconfont icon-tuandui1"></span>
 						团队信息
 					</a>
 				</li>
-				<li class="mui-table-view-cell">
+				<li class="mui-table-view-cell nenu">
 					<a class="mui-navigate-right">
-						<span class="mui-icon iconfont icon-xiaolian"></span>
+						<span class="mui-icon iconfont icon-zengzhifuwu"></span>
 						增值服务
 					</a>
 				</li>
 				<li class="mui-table-view-cell">
 					<a class="mui-navigate-right">
-						<span class="mui-icon iconfont icon-anquan"></span>
+						<span class="mui-icon iconfont icon-anquan1"></span>
 						修改密码
 					</a>
 				</li>
 				<li class="mui-table-view-cell">
 					<a class="mui-navigate-right">
-						<span class="mui-icon iconfont icon-youxiang"></span>
+						<span class="mui-icon iconfont icon-youxiang1"></span>
 						联系我们
 					</a>
 				</li>
 				<li class="mui-table-view-cell">
 					<a class="mui-navigate-right">
-						<span class="mui-icon iconfont icon-shezhi"></span>
+						<span class="mui-icon iconfont icon-shezhi1"></span>
 						设&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;置
 					</a>
 				</li>
@@ -180,6 +180,23 @@
 				}
 
 			);
+			mui('.menu').on('tap','a', function(e) {
+			//获取当前点击的url
+			     var myUrl = this.href;
+			//首先隐藏侧滑菜单
+			    mui.menu = closeMenu;
+			//  获取打开的所有webview页面                     
+			   var wvs = plus.webview.all();
+			//console.log(wvs);
+			for (var i = 0, len = wvs.length; i < len; i++) {
+			//   隐藏所有的页面
+			    plus.webview.hide(wvs[i])
+			}
+			mui.openWindow({  
+			         url:myUrl,
+			   })  
+			});
+			
 			//获得侧滑主窗口webview对象
 			var main = null;
 			mui.plusReady(function() {
