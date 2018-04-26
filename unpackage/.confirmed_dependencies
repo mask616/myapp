@@ -73,7 +73,12 @@
 			"css/mui.min.css",
 			"css/iconfont.css"
 		],
-		"refer": [],
+		"refer": [
+			"pages/info/notice.html",
+			"pages/info/demo.html",
+			"pages/info/helper.html",
+			"pages/info/notify.html"
+		],
 		"priority": 0
 	}
 }

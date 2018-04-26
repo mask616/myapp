@@ -6,7 +6,6 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title></title>
 		<link href="../../css/mui.min.css" rel="stylesheet" />
-		<link rel="stylesheet" type="text/css" href="../../css/app.css" />
 		<link href="../../css/mui.imageviewer.css" rel="stylesheet" />
 		<style>
 			html,
@@ -293,6 +292,14 @@
 			.cancel {
 				background-color: darkred;
 			}
+			.hm-description{
+				margin: .5em 0;
+			}
+			
+			.hm-description>li {
+				font-size: 14px;
+				color: #8f8f94;
+			}
 		</style>
 	</head>
 
@@ -355,6 +362,7 @@
 			(function($, doc) {
 				var MIN_SOUND_TIME = 800;
 				$.init({
+					swipeBack: true,
 					gestureConfig: {
 						tap: true, //默认为true
 						doubletap: true, //默认为false
@@ -363,6 +371,7 @@
 						drag: true, //默认为true
 						hold: true, //默认为false，不监听
 						release: true //默认为false，不监听
+						
 					}
 				});
 				template.config('escape', false);
@@ -402,11 +411,12 @@
 							//alert("ll");
 						}
 					};
-					var record = [{
+					/*var record = [{
 						sender: 'zs',
 						type: 'text',
 						content: 'Hi，我是 MUI 小管家！'
-					}];
+					}];*/
+					var record = null;
 					var ui = {
 						body: doc.querySelector('body'),
 						footer: doc.querySelector('footer'),

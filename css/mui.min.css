@@ -3986,7 +3986,7 @@ body>.mui-progressbar {
 .mui-navigate-right:after,
 .mui-push-right:after {
 	right: 15px;
-	/*content: '\e583';*/
+	content: '\e583';
 	/*content: "\e732"*/
 }
 
