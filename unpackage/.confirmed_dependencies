@@ -62,7 +62,8 @@
 			"images/icon-girl_gaitubao_com_39x39.png"
 		],
 		"refer": [
-			"pages/contact/chat.html"
+			"pages/contact/chat.html",
+			"pages/contact/department.html"
 		],
 		"priority": 0
 	},
