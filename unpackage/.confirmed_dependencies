@@ -63,7 +63,8 @@
 		],
 		"refer": [
 			"pages/contact/chat.html",
-			"pages/contact/department.html"
+			"pages/contact/department.html",
+			"pages/contact/group.html"
 		],
 		"priority": 0
 	},
@@ -81,5 +82,15 @@
 			"pages/info/notify.html"
 		],
 		"priority": 0
+	},
+	"pages/contact/chat.html": {
+		"refer": [
+			"pages/contact/department.html"
+		]
+	},
+	"pages/contact/department.html": {
+		"refer": [
+			"pages/contact/chat.html"
+		]
 	}
 }

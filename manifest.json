@@ -193,7 +193,8 @@
 				"priority": 2,
 				"refer": [
 					"pages/contact/chat.html",
-					"pages/contact/department.html"
+					"pages/contact/department.html",
+					"pages/contact/group.html"
 				]
 			},
 			"pages/info.html": {
@@ -212,6 +213,20 @@
 					"pages/info/helper.html",
 					"pages/info/notify.html"
 				]
+			},
+			"pages/contact/chat.html": {
+				"resources": [],
+				"refer": [
+					"pages/contact/department.html"
+				],
+				"priority": 0
+			},
+			"pages/contact/department.html": {
+				"resources": [],
+				"refer": [
+					"pages/contact/chat.html"
+				],
+				"priority": 0
 			}
 		},
 		"idle": {
