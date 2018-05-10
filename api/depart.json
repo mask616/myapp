@@ -1,0 +1,93 @@
+{
+	"errCode": 200,
+	"errMsg": null,
+	"departments": [{
+			"id": 1,
+			"departname": "产品",
+			"staffs": [{
+					"id": 2,
+					"name": "艾AA",
+					"age": 22,
+					"sex": "女",
+					"birth": "1996/04/17",
+					"tel": 15555555555,
+					"pinyin": "AiAA",
+					"avatar": "../images/icon-girl_39x39.png",
+					"email": "1@163.com",
+					"depart": 1
+				},
+				{
+					"id": 3,
+					"name": "叶文洁",
+					"age": 22,
+					"sex": "女",
+					"birth": "1996/04/17",
+					"tel": 15555555555,
+					"pinyin": "YeWenJie",
+					"avatar": "../images/icon-girl_39x39.png",
+					"email": "1@163.com",
+					"depart": 1
+				}
+			]
+		},
+		{
+			"id": 2,
+			"departname": "运维",
+			"staffs": [{
+					"id": 1,
+					"name": "史强",
+					"age": 22,
+					"sex": "男",
+					"birth": "1996/04/17",
+					"tel": 15555555555,
+					"pinyin": "ShiQiang",
+					"avatar": "../images/icon-boy_39x39.png",
+					"email": "1@163.com",
+					"depart": 2
+				},
+				{
+					"id": 4,
+					"name": "罗辑",
+					"age": 22,
+					"sex": "男",
+					"birth": "1996/04/17",
+					"tel": 15555555555,
+					"pinyin": "LuoJi",
+					"avatar": "../images/icon-boy_39x39.png",
+					"email": "1@163.com",
+					"depart": 2
+				}
+			]
+		},
+		{
+			"id": 3,
+			"departname": "开发",
+			"staffs": [{
+					"id": 5,
+					"name": "云天明",
+					"age": 22,
+					"sex": "男",
+					"birth": "1996/04/17",
+					"tel": 15555555555,
+					"pinyin": "YunTianMing",
+					"avatar": "../images/icon-boy_39x39.png",
+					"email": "1@163.com",
+					"depart": 3
+				},
+				{
+					"id": 6,
+					"name": "赵卫国",
+					"age": 22,
+					"sex": "男",
+					"birth": "1996/04/17",
+					"tel": 15555555555,
+					"pinyin": "ZhaoWeiGuo",
+					"avatar": "../images/icon-boy_39x39.png",
+					"email": "1@163.com",
+					"depart": 3
+				}
+
+			]
+		}
+	]
+}

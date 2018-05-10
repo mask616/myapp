@@ -194,7 +194,8 @@
 				"refer": [
 					"pages/contact/chat.html",
 					"pages/contact/department.html",
-					"pages/contact/group.html"
+					"pages/contact/group.html",
+					"pages/main.html"
 				]
 			},
 			"pages/info.html": {
@@ -225,6 +226,14 @@
 				"resources": [],
 				"refer": [
 					"pages/contact/chat.html"
+				],
+				"priority": 0
+			},
+			"pages/contact/group.html": {
+				"resources": [],
+				"refer": [
+					"pages/contact/chat.html",
+					"pages/contact/group_chat.html"
 				],
 				"priority": 0
 			}

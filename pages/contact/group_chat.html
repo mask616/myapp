@@ -428,7 +428,7 @@
 							content: 'Hi，我是 MUI 小管家！'
 						}],
 						id: null,
-						name: ''
+						groupname: ''
 					}
 				}
 
@@ -451,7 +451,7 @@
 
 					//前页传入的数据，直接渲染，无需等待ajax请求详情后
 					vm.id = event.detail.id;
-					vm.name = event.detail.name;
+					vm.name = event.detail.groupname;
 					
 					//向服务端请求文章详情内容
 					/*mui.ajax('http://spider.dcloud.net.cn/api/news/36kr/' + guid, {

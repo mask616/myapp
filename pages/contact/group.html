@@ -11,14 +11,17 @@
 		<!--<link rel="stylesheet" href="../css/mui.min.css">-->
 		<link rel="stylesheet" href="../../css/mui.css" />
 		<style>
-			html,body {
+			html,
+			body {
 				background-color: #efeff4;
 			}
-			.title{
+			
+			.title {
 				margin: 20px 15px 10px;
 				color: #6d6d72;
 				font-size: 15px;
 			}
+			
 			.oa-contact-cell.mui-table .mui-table-cell {
 				padding: 11px 0;
 				vertical-align: middle;
@@ -28,29 +31,37 @@
 				position: relative;
 				margin: -15px 0;
 			}
-	
+			
 			.oa-contact-avatar {
 				width: 75px;
 			}
+			
 			.oa-contact-avatar img {
 				border-radius: 50%;
 			}
+			
 			.oa-contact-content {
 				width: 100%;
 			}
+			
 			.oa-contact-name {
 				margin-right: 20px;
 			}
-			.oa-contact-name, oa-contact-position {
+			
+			.oa-contact-name,
+			oa-contact-position {
 				float: left;
 			}
-			.oa-group-name{
+			
+			.oa-group-name {
 				margin-left: 20px;
 			}
-			.ul-margin-top{
-				margin-top: 20px;
+			
+			.ul-margin-top {
+				margin-top: 10px;
 			}
-			.search-fixed{
+			
+			.search-fixed {
 				position: fixed;
 				z-index: 10;
 				right: 0;
@@ -64,133 +75,121 @@
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 			<h1 class="mui-title">群组</h1>
 		</header>
-		
-		<div class="mui-content">
-			<div class="mui-input-row mui-search mui-placeholder" >
-					<input type="search" class="mui-input-clear"  placeholder="搜索">
-					<!--<span class="mui-icon mui-icon-s"></span>-->
+		<div id="group" class="mui-content">
+			<div class="mui-input-row mui-search mui-placeholder">
+				<input type="search" class="mui-input-clear" placeholder="搜索">
+				<!--<span class="mui-icon mui-icon-s"></span>-->
 			</div>
 			<div class="ul-margin-top">
-			<ul id="list" class="mui-table-view mui-table-view-striped mui-table-view-condensed">
-				<li class="mui-table-view-cell">
-					<a href="contact/chat.html">
-					<div class="mui-slider-cell">
-						<div class="oa-contact-cell mui-table">
-							<div class="oa-contact-avatar mui-table-cell">
-								<img src="../../images/icon-boy_gaitubao_com_39x39.png" />
-								<!--<span class="mui-icon iconfont icon-"></span>-->
-							</div>
-							<div class="oa-contact-content mui-table-cell">
-								<div class="mui-clearfix">
-									<!--<h4 class="oa-contact-name">全体员工群</h4>-->
-									全体员工群
-									<span class="mui-badge mui-pull-right mui-badge-red">5</span>
+				<ul id="list" class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+					<li class="mui-table-view-cell" v-for="item in items">
+						<a href="javascript:;" :data-guid="item.id" @tap="start_chat(item)">
+							<div class="mui-slider-cell">
+								<div class="oa-contact-cell mui-table">
+									<div class="oa-contact-avatar mui-table-cell">
+										<img :src="item.groupavatar" />
+										<!--<span class="mui-icon iconfont icon-"></span>-->
+									</div>
+									<div class="oa-contact-content mui-table-cell">
+										<div class="mui-clearfix">
+											<!--<h4 class="oa-contact-name">全体员工群</h4>-->
+											{{item.groupname}}
+											<span class="mui-badge mui-pull-right mui-badge-red">5</span>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
-					</div>
-					</a>
-				</li>
-				
-				
-				<li class="mui-table-view-cell">
-					<a href="contact/chat.html">
-					<div class="mui-slider-cell">
-						<div class="oa-contact-cell mui-table">
-							<div class="oa-contact-avatar mui-table-cell">
-								<img src="../../images/icon-girl_gaitubao_com_39x39.png" />
-							</div>
-							<div class="oa-contact-content mui-table-cell">
-								<div class="mui-clearfix">
-									<!--<h4 class="oa-contact-name">事业二部</h4>-->
-									事业二部
-								</div>
-							</div>
-						</div>
-					</div>
-					</a>
-				</li>
-				
-			</ul>
+						</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</body>
 	<script src="../../js/mui.min.js"></script>
+	<script type="text/javascript" src="../../js/vue.min.js" charset="UTF-8"></script>
 	<script>
 		var webview_detail = null; //详情页webview
-		
+		var titleNView = { //详情页原生导航配置
+			backgroundColor: '#f7f7f7', //导航栏背景色
+			titleText: '', //导航栏标题
+			titleColor: '#000000', //文字颜色
+			autoBackButton: true, //自动绘制返回箭头
+			splitLine: { //底部分割线
+				color: '#cccccc'
+			}
+		}
+
 		mui.init({
-			swipeBack:false //启用右滑关闭功能
+			//swipeBack: false //启用右滑关闭功能
 		});
 		mui.plusReady(function() {
 			//预加载
 			webview_detail = mui.preload({
-				url: 'contact/chat.html',
-				id: 'contact/chat.html',
+				url: 'group_chat.html',
+				id: 'group_chat',
 				styles: {
-					
-				},
-				extras:{
-					
-				},
+					/*"popGesture": "hide",*/
+					"render": "always",
+					"titleNView": titleNView
+				}
 			});
 		});
-		//主列表点击事件
-		mui('#list').on('tap', 'a', function() {
-				var href = this.getAttribute('href');
-				
-				//非plus环境，直接走href跳转
-				if(!mui.os.plus) {
-					location.href = href;
-					return;
-				}
-				
-				var id = this.getAttribute("data-wid");
-				if(!id) {
-					id = href;
-				}
 
-				if(href && ~href.indexOf('.html')) {
-					//打开窗口的相关参数
-					var options = {
-						styles:{
-							top:'-1px',
-							bottom:'0px'
-						},
-						extras:{}
-					};
-					//打开新窗口
-					mui.openWindow(href,id,options);
-				}
+		//混合vue
+		var news = new Vue({
+			el: '#group',
+			data: {
+				items: [{
+						"id": 1,
+						"groupname": "公司员工群",
+						"groupavatar": "../../images/group1_39x39.jpg"
+					},
+					{
+						"id": 2,
+						"groupname": "事业一部",
+						"groupavatar": "../../images/group2_39x39.jpg"
+					}
+				]
+			}
 		});
-		
-		//主列表点击事件
-		mui('#group').on('tap', 'a', function() {
-				var href = this.getAttribute('href');
-				
-				//非plus环境，直接走href跳转
-				if(!mui.os.plus) {
-					location.href = href;
-					return;
-				}
-				
-				var id = this.getAttribute("data-wid");
-				if(!id) {
-					id = href;
-				}
 
-				if(href && ~href.indexOf('.html')) {
-					//打开窗口的相关参数
-					var options = {
-						styles:{
-							top:'-1px',
-							bottom:'0px'
-						},
-						extras:{}
-					};
-					//打开新窗口
-					mui.openWindow(href,id,options);
-				}
-		});
+		function start_chat(item) {
+			//触发子窗口变更新闻详情
+			mui.fire(webview_detail, 'get_detail', {
+				id: item.id,
+				name: item.groupname
+			});
+
+			//更改详情页原生导航条信息
+			titleNView.titleText = item.groupname;
+			webview_detail.setStyle({
+				top: '-1px',
+				bottom: '0px',
+				titleNView: titleNView
+			});
+			setTimeout(function() {
+				webview_detail.show("slide-in-right", 300);
+			}, 150);
+		}
+		/**
+		 * 1、将服务端返回数据，转换成前端需要的格式
+		 * 2、若服务端返回格式和前端所需格式相同，则不需要改功能
+		 * 
+		 * @param {Array} items 
+		 */
+		function convert(items) {
+			var newItems = [];
+			items.forEach(function(item) {
+				newItems.push({
+					guid: item.post_id,
+					title: item.title,
+					author: item.author_name,
+					cover: item.cover,
+					time: dateUtils.format(item.published_at)
+				});
+			});
+			return newItems;
+		}
 	</script>
+
 </html>

@@ -1,0 +1,16 @@
+{
+    "errCode": 200,
+    "errMsg": null,
+    "groups": [
+        {
+            "id": 1,
+            "groupname": "公司员工群",
+            "avatar": "../../images/group1_39x39.jpg"
+        },
+        {
+            "id": 2,
+            "groupname": "事业一部",
+            "avatar": "../../images/group2_39x39.jpg"
+        }
+    ]
+}

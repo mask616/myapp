@@ -58,133 +58,27 @@
 			<h1 class="mui-title">部门</h1>
 		</header>
 
-		<div class="mui-content">
+		<div id="depart" class="mui-content">
 			<div class="">
-				<ul class="mui-table-view mui-table-view-chevron">
-					<li class="mui-table-view-cell mui-collapse">	
+				<ul class="mui-table-view mui-table-view-chevron" id="list">
+					<li class="mui-table-view-cell mui-collapse" v-for="item in items">
 						<a class="depart-ul-icon" href="#">
 							<!--<span class="iconfont icon-open"></span>-->
-							产品
+							{{item.departname}}
 						</a>
 						<ul class="mui-table-view mui-table-view-chevron">
-							<li class="mui-table-view-cell">
-								<a href="../contact/chat.html">
+							<li class="mui-table-view-cell" v-for="staff in item.staffs">
+								<a href="javascript:;" :data-guid="item.id" @tap="start_chat(staff)">
 									<div class="mui-slider-cell">
 										<div class="oa-contact-cell mui-table">
 											<div class="oa-contact-avatar mui-table-cell">
-												<img src="../../images/icon-boy_gaitubao_com_39x39.png" />
+												<img :src="staff.avatar" />
 												<!--<span class="mui-icon iconfont icon-"></span>-->
 											</div>
 											<div class="oa-contact-content mui-table-cell">
 												<div class="mui-clearfix">
 													<!--<h4 class="oa-contact-name">叶文洁</h4>-->
-													叶文洁
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-							</li>
-							<li class="mui-table-view-cell">
-								<a href="../contact/chat.html">
-									<div class="mui-slider-cell">
-										<div class="oa-contact-cell mui-table">
-											<div class="oa-contact-avatar mui-table-cell">
-												<img src="../../images/icon-boy_gaitubao_com_39x39.png" />
-												<!--<span class="mui-icon iconfont icon-"></span>-->
-											</div>
-											<div class="oa-contact-content mui-table-cell">
-												<div class="mui-clearfix">
-													<!--<h4 class="oa-contact-name">叶文洁</h4>-->
-													艾AA
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li class="mui-table-view-cell mui-collapse">
-						<a class="depart-ul-icon" href="#">
-							<!--<span class="depart-li-icon iconfont icon-open"></span>-->
-							开发
-						</a>
-						<ul class="mui-table-view mui-table-view-chevron">
-							<li class="mui-table-view-cell">
-								<a href="../contact/chat.html">
-									<div class="mui-slider-cell">
-										<div class="oa-contact-cell mui-table">
-											<div class="oa-contact-avatar mui-table-cell">
-												<img src="../../images/icon-boy_gaitubao_com_39x39.png" />
-												<!--<span class="mui-icon iconfont icon-"></span>-->
-											</div>
-											<div class="oa-contact-content mui-table-cell">
-												<div class="mui-clearfix">
-													<!--<h4 class="oa-contact-name">叶文洁</h4>-->
-													罗辑
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-							</li>
-							<li class="mui-table-view-cell">
-								<a href="../contact/chat.html">
-									<div class="mui-slider-cell">
-										<div class="oa-contact-cell mui-table">
-											<div class="oa-contact-avatar mui-table-cell">
-												<img src="../../images/icon-boy_gaitubao_com_39x39.png" />
-												<!--<span class="mui-icon iconfont icon-"></span>-->
-											</div>
-											<div class="oa-contact-content mui-table-cell">
-												<div class="mui-clearfix">
-													<!--<h4 class="oa-contact-name">叶文洁</h4>-->
-													云天明
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li class="mui-table-view-cell mui-collapse">
-						<a class="depart-ul-icon" href="#">
-							<!--<span class="iconfont icon-open"></span>-->
-							运维
-						</a>
-						<ul class="mui-table-view mui-table-view-chevron">
-							<li class="mui-table-view-cell">
-								<a href="../contact/chat.html">
-									<div class="mui-slider-cell">
-										<div class="oa-contact-cell mui-table">
-											<div class="oa-contact-avatar mui-table-cell">
-												<img src="../../images/icon-boy_gaitubao_com_39x39.png" />
-												<!--<span class="mui-icon iconfont icon-"></span>-->
-											</div>
-											<div class="oa-contact-content mui-table-cell">
-												<div class="mui-clearfix">
-													<!--<h4 class="oa-contact-name">叶文洁</h4>-->
-													史强
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-							</li>
-							<li class="mui-table-view-cell">
-								<a href="../contact/chat.html">
-									<div class="mui-slider-cell">
-										<div class="oa-contact-cell mui-table">
-											<div class="oa-contact-avatar mui-table-cell">
-												<img src="../../images/icon-boy_gaitubao_com_39x39.png" />
-												<!--<span class="mui-icon iconfont icon-"></span>-->
-											</div>
-											<div class="oa-contact-content mui-table-cell">
-												<div class="mui-clearfix">
-													<!--<h4 class="oa-contact-name">叶文洁</h4>-->
-													Mask
+													{{staff.name}}
 												</div>
 											</div>
 										</div>
@@ -198,10 +92,169 @@
 		</div>
 	</body>
 	<script src="../../js/mui.min.js"></script>
+	<script type="text/javascript" src="../../js/vue.min.js" charset="UTF-8"></script>
 	<script>
+		var webview_detail = null; //详情页webview
+		var titleNView = { //详情页原生导航配置
+			backgroundColor: '#f7f7f7', //导航栏背景色
+			titleText: '', //导航栏标题
+			titleColor: '#000000', //文字颜色
+			autoBackButton: true, //自动绘制返回箭头
+			splitLine: { //底部分割线
+				color: '#cccccc'
+			}
+		}
+
 		mui.init({
-			swipeBack: true //启用右滑关闭功能
+			//swipeBack: false //启用右滑关闭功能
 		});
+		mui.plusReady(function() {
+			//预加载
+			webview_detail = mui.preload({
+				url: 'contact/chat.html',
+				id: 'chat',
+				styles: {
+					/*"popGesture": "hide",*/
+					"render": "always",
+					"titleNView": titleNView
+				}
+			});
+		});
+
+		//混合vue
+		var news = new Vue({
+			el: '#depart',
+			data: {
+				items: [{
+						"id": 1,
+						"departname": "产品",
+						"staffs": [{
+								"id": 2,
+								"name": "艾AA",
+								"age": 22,
+								"sex": "女",
+								"birth": "1996/04/17",
+								"tel": 15555555555,
+								"pinyin": "AiAA",
+								"avatar": "../../images/icon-girl_39x39.png",
+								"email": "1@163.com",
+								"depart": 1
+							},
+							{
+								"id": 3,
+								"name": "叶文洁",
+								"age": 22,
+								"sex": "女",
+								"birth": "1996/04/17",
+								"tel": 15555555555,
+								"pinyin": "YeWenJie",
+								"avatar": "../../images/icon-girl_39x39.png",
+								"email": "1@163.com",
+								"depart": 1
+							}
+						]
+					},
+					{
+						"id": 2,
+						"departname": "运维",
+						"staffs": [{
+								"id": 1,
+								"name": "史强",
+								"age": 22,
+								"sex": "男",
+								"birth": "1996/04/17",
+								"tel": 15555555555,
+								"pinyin": "ShiQiang",
+								"avatar": "../../images/icon-boy_39x39.png",
+								"email": "1@163.com",
+								"depart": 2
+							},
+							{
+								"id": 4,
+								"name": "罗辑",
+								"age": 22,
+								"sex": "男",
+								"birth": "1996/04/17",
+								"tel": 15555555555,
+								"pinyin": "LuoJi",
+								"avatar": "../../images/icon-boy_39x39.png",
+								"email": "1@163.com",
+								"depart": 2
+							}
+						]
+					},
+					{
+						"id": 3,
+						"departname": "开发",
+						"staffs": [{
+								"id": 5,
+								"name": "云天明",
+								"age": 22,
+								"sex": "男",
+								"birth": "1996/04/17",
+								"tel": 15555555555,
+								"pinyin": "YunTianMing",
+								"avatar": "../../images/icon-boy_39x39.png",
+								"email": "1@163.com",
+								"depart": 3
+							},
+							{
+								"id": 6,
+								"name": "赵卫国",
+								"age": 22,
+								"sex": "男",
+								"birth": "1996/04/17",
+								"tel": 15555555555,
+								"pinyin": "ZhaoWeiGuo",
+								"avatar": "../../images/icon-boy_39x39.png",
+								"email": "1@163.com",
+								"depart": 3
+							}
+
+						]
+					}
+				]
+			}
+		});
+
+		function start_chat(item) {
+			//触发子窗口变更新闻详情
+			mui.fire(webview_detail, 'get_detail', {
+				id: item.id,
+				name: item.name,
+				avatar: item.avatar
+			});
+
+			//更改详情页原生导航条信息
+			titleNView.titleText = item.name;
+			webview_detail.setStyle({
+				top: '-1px',
+				bottom: '0px',
+				titleNView: titleNView
+			});
+			setTimeout(function() {
+				webview_detail.show("slide-in-right", 300);
+			}, 150);
+		}
+		/**
+		 * 1、将服务端返回数据，转换成前端需要的格式
+		 * 2、若服务端返回格式和前端所需格式相同，则不需要改功能
+		 * 
+		 * @param {Array} items 
+		 */
+		function convert(items) {
+			var newItems = [];
+			items.forEach(function(item) {
+				newItems.push({
+					guid: item.post_id,
+					title: item.title,
+					author: item.author_name,
+					cover: item.cover,
+					time: dateUtils.format(item.published_at)
+				});
+			});
+			return newItems;
+		}
 	</script>
 
 </html>
