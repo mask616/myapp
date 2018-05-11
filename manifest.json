@@ -195,7 +195,8 @@
 					"pages/contact/chat.html",
 					"pages/contact/department.html",
 					"pages/contact/group.html",
-					"pages/main.html"
+					"pages/main.html",
+					"pages/contact/contact_list.html"
 				]
 			},
 			"pages/info.html": {

@@ -1,0 +1,81 @@
+{
+	"errCode": 200,
+	"errMsg": null,
+	"contacts": [
+		{
+			"GROUP": "A",
+			"DETAIL": [
+				{
+					"id": 1,
+					"name": "艾小丽",
+					"age": 22,
+					"sex": "男",
+					"birth": "1996/04/17",
+					"tel": 15555555555,
+					"pinyin": "AiXiaoLi",
+					"avatar": "../images/icon-boy_39x39.png",
+					"email": "1@163.com",
+					"company": "百度科技"
+				}
+			]
+		}, {
+			"GROUP": "B",
+			"DETAIL": [
+				{
+					"id": 2,
+					"name": "白罗生",
+					"age": 22,
+					"sex": "女",
+					"birth": "1996/04/17",
+					"tel": 15555555555,
+					"pinyin": "BaiLuoSheng",
+					"avatar": "../images/icon-girl_39x39.png",
+					"email": "1@163.com",
+					"company": "腾讯科技"
+				}
+			]
+		}, {
+			"GROUP": "C",
+			"DETAIL": [
+				{
+					"id": 3,
+					"name": "陈真",
+					"age": 22,
+					"sex": "女",
+					"birth": "1996/04/17",
+					"tel": 15555555555,
+					"pinyin": "ChenZhen",
+					"avatar": "../images/icon-girl_39x39.png",
+					"email": "1@163.com",
+					"company": "阿里巴巴"
+				}, {
+					"id": 6,
+					"name": "曹格",
+					"age": 22,
+					"sex": "女",
+					"birth": "1996/04/17",
+					"tel": 15555555555,
+					"pinyin": "CaoGE",
+					"avatar": "../images/icon-girl_39x39.png",
+					"email": "1@163.com",
+					"company": "阿里巴巴"
+				}
+			]
+		}, {
+			"GROUP": "D",
+			"DETAIL": [
+				{
+					"id": 4,
+					"name": "丁铁柱",
+					"age": 22,
+					"sex": "男",
+					"birth": "1996/04/17",
+					"tel": 15555555555,
+					"pinyin": "DingTieZ",
+					"email": "1@163.com",
+					"company": "网易"
+				}
+			]
+		}
+	]
+}
