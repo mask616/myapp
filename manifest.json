@@ -12,8 +12,8 @@
 	},
 	"launch_path": "index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
 	"developer": {
-		"name": "",/*开发者名称*/
-		"email": "",/*开发者邮箱地址*/
+		"name": "Mask",/*开发者名称*/
+		"email": "mask616@163,com",/*开发者邮箱地址*/
 		"url": "http://www.dcloud.io"
 	},
 	"permissions": {
@@ -165,7 +165,11 @@
 					"fonts/iconfont.ttf",
 					"css/iconfont.css"
 				],
-				"priority": 0
+				"priority": 0,
+				"refer": [
+					"pages/team_info.html",
+					"pages/main/qiandao.html"
+				]
 			},
 			"menu.html": {
 				"href": "menu.html",

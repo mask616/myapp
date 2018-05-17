@@ -8,19 +8,21 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<link rel="stylesheet" href="../css/mui.min.css">
-		<link rel="stylesheet"  href="../css/iconfont.css"/>
+		<link rel="stylesheet" href="../css/iconfont.css" />
 		<style>
 			html,
 			body {
 				background-color: #efeff4;
 			}
+			
 			.title {
 				padding: 20px 15px 10px;
 				color: #6d6d72;
 				font-size: 15px;
 				background-color: #fff;
 			}
-			.nav{
+			
+			.nav {
 				margin-left: 10px;
 			}
 		</style>
@@ -30,72 +32,159 @@
 		<!--<header class="mui-bar mui-bar-nav">
 		   
 		</header>-->
-		<div class="mui-content">
-				<span class="nav">协同办公</span>
-		        <ul class="mui-table-view mui-grid-view main-ul-color">
-		        	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2"><a href="#">
-		                    <span class="mui-icon iconfont icon-weibiaoti2fuzhi17" style="background-color: ;"></span>
-		                    <div class="mui-media-body">签到</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2" ><a href="#">
-		                    <span class="mui-icon iconfont icon-gaizhangshenpi" style="background-color: ;"></span>
-		                    <div class="mui-media-body">审批</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2"><a href="#">
-		                    <span class="mui-icon iconfont icon-nb-1" style="background-color: ;"></span>
-		                    <div class="mui-media-body">计划</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2"><a href="#">
-		                    <span class="mui-icon iconfont icon-xinxigongxiang" style="background-color: ;"></span>
-		                    <div class="mui-media-body">汇报</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2"><a href="#">
-		                    <span class="mui-icon iconfont icon-gonggao" style="background-color: ;"></span>
-		                    <div class="mui-media-body">公告</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2"><a href="#">
-		                    <span class="mui-icon iconfont icon-icon-p_rili" style="background-color: ;"></span>
-		                    <div class="mui-media-body">台历</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2"><a href="#">
-		                    <span class="mui-icon iconfont icon-huiyishi" style="background-color: ;"></span>
-		                    <div class="mui-media-body">会议室</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2"><a href="#">
-		                    <span class="mui-icon iconfont icon-yingxiao" style="background-color: ;"></span>
-		                    <div class="mui-media-body">其他</div></a></li>
-		           <!--<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+		<div id="main" class="mui-content">
+			<ul class="mui-table-view mui-table-view-chevron main-ul-color">
+				<li class="mui-table-view-cell mui-media">
+					<a href="team_info.html">
+						<img class="mui-media-object mui-pull-left head-img" id="head-img" src="../images/logo.png">
+						<div class="mui-media-body">
+							数字天堂
+							<p class='mui-ellipsis'>团队账号:666666</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<span class="nav">协同办公</span>
+			<ul class="mui-table-view mui-grid-view main-ul-color">
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2">
+					<a href="main/qiandao.html">
+						<span class="mui-icon iconfont icon-weibiaoti2fuzhi17"></span>
+						<div class="mui-media-body">签到</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2">
+					<a href="#">
+						<span class="mui-icon iconfont icon-gaizhangshenpi" style="background-color: ;"></span>
+						<div class="mui-media-body">审批</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2">
+					<a href="#">
+						<span class="mui-icon iconfont icon-nb-1" style="background-color: ;"></span>
+						<div class="mui-media-body">计划</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2">
+					<a href="#">
+						<span class="mui-icon iconfont icon-xinxigongxiang" style="background-color: ;"></span>
+						<div class="mui-media-body">汇报</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2">
+					<a href="#">
+						<span class="mui-icon iconfont icon-gonggao" style="background-color: ;"></span>
+						<div class="mui-media-body">公告</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2">
+					<a href="#">
+						<span class="mui-icon iconfont icon-icon-p_rili" style="background-color: ;"></span>
+						<div class="mui-media-body">台历</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2">
+					<a href="#">
+						<span class="mui-icon iconfont icon-huiyishi" style="background-color: ;"></span>
+						<div class="mui-media-body">会议室</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2">
+					<a href="#">
+						<span class="mui-icon iconfont icon-yingxiao" style="background-color: ;"></span>
+						<div class="mui-media-body">其他</div>
+					</a>
+				</li>
+				<!--<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
 		                    <span class="mui-icon iconfont icon-shezhi"></span>
 		                    <div class="mui-media-body">设置</div></a></li>-->
-		        </ul> 
-		</div>
-		<span class="nav">CRM</span>
-		        <ul class="mui-table-view mui-grid-view main-ul-color">
-		        	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2"><a href="#">
-		                    <span class="mui-icon iconfont icon-nb-4" style="background-color: ;"></span>
-		                    <div class="mui-media-body">线索</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2"><a href="#">
-		                    <span class="mui-icon iconfont icon-kehu" style="background-color: ;"></span>
-		                    <div class="mui-media-body">客户</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2"><a href="#">
-		                    <span class="mui-icon iconfont icon-dengpao" style="background-color: ;"></span>
-		                    <div class="mui-media-body">商机</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2"><a href="#">
-		                    <span class="mui-icon iconfont icon-hetong" style="background-color: ;"></span>
-		                    <div class="mui-media-body">合同</div></a></li>
-		        </ul> 
+			</ul>
+
+			<span class="nav">CRM</span>
+			<ul class="mui-table-view mui-grid-view main-ul-color">
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2">
+					<a href="#">
+						<span class="mui-icon iconfont icon-nb-4" style="background-color: ;"></span>
+						<div class="mui-media-body">线索</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2">
+					<a href="#">
+						<span class="mui-icon iconfont icon-kehu" style="background-color: ;"></span>
+						<div class="mui-media-body">客户</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2">
+					<a href="#">
+						<span class="mui-icon iconfont icon-dengpao" style="background-color: ;"></span>
+						<div class="mui-media-body">商机</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2">
+					<a href="#">
+						<span class="mui-icon iconfont icon-hetong" style="background-color: ;"></span>
+						<div class="mui-media-body">合同</div>
+					</a>
+				</li>
+			</ul>
 		</div>
 		<span class="nav">项目管理</span>
-		        <ul class="mui-table-view mui-grid-view main-ul-color">
-		        	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2"><a href="#">
-		                    <span class="mui-icon iconfont icon-xiangmu1" style="background-color: ;"></span>
-		                    <div class="mui-media-body">项目</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2"><a href="#">
-		                    <span class="mui-icon iconfont icon-web-icon-" style="background-color: ;"></span>
-		                    <div class="mui-media-body">任务</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2"><a href="#">
-		                    <span class="mui-icon iconfont icon-gongwenguanli" style="background-color: ;"></span>
-		                    <div class="mui-media-body">跟进</div></a></li>
-		        </ul> 
+		<ul class="mui-table-view mui-grid-view main-ul-color">
+			<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2">
+				<a href="#">
+					<span class="mui-icon iconfont icon-xiangmu1" style="background-color: ;"></span>
+					<div class="mui-media-body">项目</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2">
+				<a href="#">
+					<span class="mui-icon iconfont icon-web-icon-" style="background-color: ;"></span>
+					<div class="mui-media-body">任务</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2">
+				<a href="#">
+					<span class="mui-icon iconfont icon-gongwenguanli" style="background-color: ;"></span>
+					<div class="mui-media-body">跟进</div>
+				</a>
+			</li>
+		</ul>
 		</div>
 	</body>
 	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript" src="../js/mui.view.js"></script>
 	<script>
 		mui.init({
-			swipeBack:false //启用右滑关闭功能
+			swipeBack: false //启用右滑关闭功能
+		});
+
+		//主列表点击事件
+		mui('#main').on('tap', 'a', function() {
+			var href = this.getAttribute('href');
+
+			//非plus环境，直接走href跳转
+			if(!mui.os.plus) {
+				location.href = href;
+				return;
+			}
+
+			var id = this.getAttribute("data-wid");
+			if(!id) {
+				id = href;
+			}
+
+			if(href && ~href.indexOf('.html')) {
+				//打开窗口的相关参数
+				var options = {
+					styles: {
+						top: '-1px',
+						bottom: '0px',
+					},
+					extras: {}
+				};
+				//打开新窗口
+				mui.openWindow(href, id, options);
+			}
 		});
 	</script>
+
 </html>

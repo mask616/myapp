@@ -4799,5 +4799,9 @@ body>.mui-progressbar {
 }
 
 .main-ul-color{
-	background-color: rgba(237,237,237,0.2);
+	background-color: #ffffff;
+}
+
+.ul-margin-top{
+	margin-top: 20px;
 }

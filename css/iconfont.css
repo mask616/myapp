@@ -12,6 +12,7 @@
   font-style:normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /*color:#2187E7 ;*/
 }
 
 .icon-zhankai:before { content: "\e638"; }
@@ -38,7 +39,7 @@
 
 .icon-daichuli:before { content: "\e62e"; }
 
-.icon-gonggao:before { content: "\e617"; }
+.icon-gonggao:before { content: "\e617";color: #2187E7 }
 
 .icon-touxiang1:before { content: "\e679"; }
 
@@ -46,7 +47,7 @@
 
 .icon-payment:before { content: "\e65f"; }
 
-.icon-weibiaoti2fuzhi17:before { content: "\e62f"; }
+.icon-weibiaoti2fuzhi17:before { content: "\e62f";color: #2187E7 }
 
 .icon-anquan1:before { content: "\e719"; }
 
@@ -70,7 +71,7 @@
 
 .icon-fukuan:before { content: "\e61f"; }
 
-.icon-icon-p_rili:before { content: "\e61a"; }
+.icon-icon-p_rili:before { content: "\e61a";color: #2187E7 }
 
 .icon-tianxieribao:before { content: "\e62c"; }
 
@@ -82,7 +83,7 @@
 
 .icon-web-icon-:before { content: "\e6e0"; }
 
-.icon-huiyishi:before { content: "\e61b"; }
+.icon-huiyishi:before { content: "\e61b"; color: #2187E7}
 
 .icon-lianxiren:before { content: "\e622"; }
 
@@ -196,7 +197,7 @@
 
 .icon-liucheng:before { content: "\e78c"; }
 
-.icon-rili:before { content: "\e78d"; }
+.icon-rili:before { content: "\e78d";color: #2187E7 }
 
 .icon-chucha:before { content: "\e62d"; }
 
@@ -212,7 +213,7 @@
 
 .icon-nb-:before { content: "\e607"; }
 
-.icon-nb-1:before { content: "\e608"; }
+.icon-nb-1:before { content: "\e608"; color: #2187E7}
 
 .icon-nb-2:before { content: "\e609"; }
 
@@ -228,7 +229,7 @@
 
 .icon-liuchengpeizhi:before { content: "\e60f"; }
 
-.icon-xinxigongxiang:before { content: "\e610"; }
+.icon-xinxigongxiang:before { content: "\e610"; color: #2187E7}
 
 .icon-huiyiguanli:before { content: "\e611"; }
 
@@ -236,9 +237,9 @@
 
 .icon-yeji:before { content: "\e613"; }
 
-.icon-yingxiao:before { content: "\e614"; }
+.icon-yingxiao:before { content: "\e614"; color: #2187E7}
 
-.icon-gaizhangshenpi:before { content: "\e615"; }
+.icon-gaizhangshenpi:before { content: "\e615"; color: #2187E7}
 
 .icon-open1:before { content: "\e626"; }
 

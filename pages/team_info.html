@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+	</head>
+	<style>
+		#head {
+			line-height: 40px;
+		}
+		
+		.head-img {
+			width: 40px;
+			height: 40px;
+		}
+		
+		#head-img1 {
+			position: absolute;
+			bottom: 10px;
+			right: 30px;
+			width: 40px;
+			height: 40px;
+		}
+	</style>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">团队信息</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li id="head" class="mui-table-view-cell">
+					<a>Logo
+						<span class="mui-pull-right head">
+									<img class="head-img mui-action-preview" id="head-img1" src="../images/logo.png"/>
+						</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a>公司名称<span class="mui-pull-right">数字天堂</span></a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a>HBuilder账号<span class="mui-pull-right">hbuilder@dcloud.io</span></a>
+				</li>
+			</ul>
+			<ul class="mui-table-view ul-margin-top">
+				<li class="mui-table-view-cell">
+					<a>QQ号<span class="mui-pull-right">88888888</span></a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a>手机号<span class="mui-pull-right">18601234567</span></a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a>邮箱地址<span class="mui-pull-right">hbuilder@dcloud.io</span></a>
+				</li>
+			</ul>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

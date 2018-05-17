@@ -60,11 +60,13 @@
 					<a>Z</a>
 				</div>
 				<div class="mui-indexed-list-alert"></div>
-				<div class="mui-indexed-list-inner">
+				<div class="mui-indexed-list-inner" id="group_contact">
 					<div class="mui-indexed-list-empty-alert">没有数据</div>
 					<ul class="mui-table-view">
-						<div id="group_contact" v-for="contact in contacts">
-							<li v-bind:data-group="contact.group" class="mui-table-view-divider mui-indexed-list-group">{{contact.group}}</li>
+						<div v-for="contact in contacts">
+							<li v-bind:data-group="contact.group" class="mui-table-view-divider mui-indexed-list-group">
+								{{contact.group}}
+							</li>
 							<li v-for="detail in contact.details" v-bind:data-value="detail.pinyin" v-bind:data-tags="detail.pinyin" class="mui-table-view-cell mui-indexed-list-item">
 								{{detail.name}}
 							</li>
