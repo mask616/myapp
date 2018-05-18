@@ -6,6 +6,28 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/iconfont.css" />
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<style>
+			#clock,
+			#sign_in li {
+				list-style-type: none;
+				/*width: 20px;*/
+				/*height: 20px;*/
+			}
+			
+			#sign_in li {
+				align-content: center;
+			}
+			
+			#location button {
+				size: auto;
+			}
+			
+			#sign_in:after {
+				float: left;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -14,12 +36,161 @@
 			<h1 class="mui-title">签到</h1>
 			<button class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">我的签到</button>
 		</header>
-		<div class="mui-content">
-			
+		<div id="rule" class="mui-content">
+			<ul class="mui-table-view-cell mui-table-view-divider">
+				<div id="clock" class="">
+					<li class="">
+						<h3 id="time">{{info.time}}</h3></li>
+					<li class="">
+						<h6 id="date">{{info.date}}</h6></li>
+					<li class="">
+						<h5 id="location">{{info.location}}
+						<a href="javascript:void(0)" class="iconfont icon-anonymous-iconfont mui-pull-right" onclick="refreshLocation()">
+							<!--<span class="iconfont icon-shuaxin"></span>-->
+						</a>
+					</h5>
+					</li>
+				</div>
+			</ul>
+			<div id="sign_in">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-media">
+						<span class="mui-media-object mui-pull-left iconfont icon-qiandao-kaoqindaqia"></span>
+						<div class="mui-media-body">
+							<h5>上班</h5>
+							<h5>{{sign_rule.start_time}}</h5>
+						</div>
+						<button class="mui-btn mui-btn-primary mui-pull-right">签到</button>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<span class="mui-media-object mui-pull-left iconfont icon-qiandao-kaoqindaqia"></span>
+						<div class="mui-media-body">
+							<h5>下班</h5>
+							<h5>{{sign_rule.end_time}}</h5>
+						</div>
+						<button class="mui-btn mui-btn-primary mui-pull-right">签到</button>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<span class="mui-pull-left iconfont icon-qiandao-kaoqindaqia"></span>
+						<div class="mui-media-body mui-ellipsis">
+							<h5 style="margin-left: 10px;">外勤打卡</h5>
+						</div>
+						<button class="mui-btn mui-btn-primary mui-pull-right">签到</button>
+					</li>
+					<!--<li class="mui-table-view-cell mui-media">
+						<span class="mui-media-object mui-pull-left iconfont icon-qiandao-kaoqindaqia " ></span>
+						<img class="mui-media-object mui-pull-left" src="../images/shuijiao.jpg">
+						<div class="mui-media-body">
+							<h5>上班</h5>
+							<h5>时间</h5>
+						</div>
+				</li>-->
+				</ul>
+			</div>
 		</div>
 		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/immersed.js"></script>
+		<script type="text/javascript" src="../../js/vue.min.js"></script>
 		<script type="text/javascript">
-			mui.init();
+			var poiName = '';
+			/*mui.init();*/
+
+			function getDefaultData() {
+				return {
+					"info": {
+						"time": '',
+						"date": '',
+						"location": ''
+					},
+					"sign_rule": {
+						"start_time": "",
+						"end_time": ""
+					}
+				}
+			}
+
+			function setData(position) {
+				return {
+					"info": {
+						"time": '',
+						"date": '',
+						"location": ''
+					},
+					"sign_rule": {
+						"start_time": '09:00:00',
+						"end_time": '18:00:00'
+					}
+				}
+			}
+
+			/////////////////////////////////////////////////////////////////////
+			var vue = new Vue({
+				el: '#rule',
+				data: setData(),
+				mounted() {
+					mui.init();
+					//mui  
+					mui.plusReady(function() {
+						getGeocode();
+						getTime();
+						getDate();
+					});
+				}
+			});
+
+			//刷新当前地点
+			function refreshLocation() {
+				getGeocode();
+
+			}
+
+			//绑定页面中当前地点名称
+			function geoInf(position) {
+				vue.info.location = position.address.poiName;
+				console.log(JSON.stringify(position));
+				/*outLine( str );*/
+			}
+
+			// 通过定位模块获取位置信息
+			function getGeocode() {
+				/*outSet( "获取定位位置信息:" );*/
+				plus.geolocation.getCurrentPosition(geoInf, function(e) {
+					outSet("获取定位位置信息失败：" + e.message);
+				}, {
+					geocode: true
+				});
+			}
+
+			//获取当前时间
+			function getTime() {
+				var date = new Date();
+				//获取时分秒上下午
+				var hour = date.getHours();
+				var minutes = date.getMinutes();
+				var second = date.getSeconds();
+				var APM = hour > 12 ?'PM':'AM';			
+				vue.info.time = check(hour) + ":" + check(minutes) + ":" + check(second) + " " + APM;
+				/*document.getElementById("stime").innerHTML = timestr;*/
+				var timerID = setTimeout('getTime()', 1000);
+			}
+			
+			function getDate(){
+				var date = new Date();
+				//获取年月日星期
+				var year = date.getFullYear();
+				var month = date.getMonth() + 1;
+				var day = date.getDate();
+				var weekday = "星期" + "日一二三四五六".charAt(date.getDay());
+				vue.info.date = year + "-" + check(month) + "-" + check(day)  + " " + weekday;	
+			}
+
+			function check(val) {
+				if(val < 10) {
+					return("0" + val);
+				} else {
+					return(val);
+				}
+			}
 		</script>
 	</body>
 

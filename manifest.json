@@ -119,6 +119,13 @@
 					"xhdpi": "", /*720P高分屏启动图片，分辨率：720x1242*/
 					"xxhdpi": ""
 				}
+			},
+			"plugins":{
+				"maps":{
+					"appkey_ios": "ggfYDfsqP9Tlk2VWawaygtzSeXfKENq0",
+					"appkey_android":"5ntbk9lra9G1jBbCarMhaUPv259a5GmU",
+					"description":"百度地图"
+				}
 			}
 		},"ads":{"rp":false,"splash":false,"push":false},"adid":""
 	},

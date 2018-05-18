@@ -1,107 +1,107 @@
 {
-	"main.html": {
-		"resources": [
-			"index.html",
-			"pages/index.html"
-		],
-		"refer": [
-			"contact.html",
-			"index.html",
-			"setting.html",
-			"chat.html",
-			"pages/index.html",
-			"pages/contact.html",
-			"pages/chat.html",
-			"pages/setting.html",
-			"menu.html"
-		]
-	},
-	"index.html": {
-		"resources": [
-			"pages/main.html",
-			"css/mui.min.css",
-			"css/iconfont.css",
-			"js/mui.min.js"
-		],
-		"refer": [
-			"pages/contact.html",
-			"pages/info.html",
-			"menu.html",
-			"pages/main.html"
-		]
-	},
-	"pages/main.html": {
-		"href": "pages/main.html",
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"css/iconfont.css"
-		],
-		"refer": [
-			"pages/team_info.html",
-			"pages/main/qiandao.html"
-		],
-		"priority": 0
-	},
-	"menu.html": {
-		"href": "menu.html",
-		"resources": [
-			"css/mui.min.css",
-			"css/iconfont.css",
-			"images/trans_black_gradient.png",
-			"js/mui.min.js",
-			"images/page_photo.jpg",
-			"images/avatar.jpg"
-		],
-		"refer": [],
-		"priority": 0
-	},
-	"pages/contact.html": {
-		"href": "pages/contact.html",
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.css",
-			"images/icon-boy_gaitubao_com_39x39.png",
-			"images/icon-girl_gaitubao_com_39x39.png"
-		],
-		"refer": [
-			"pages/contact/chat.html",
-			"pages/contact/department.html",
-			"pages/contact/group.html",
-			"pages/main.html",
-			"pages/contact/contact_list.html"
-		],
-		"priority": 0
-	},
-	"pages/info.html": {
-		"href": "pages/info.html",
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"css/iconfont.css"
-		],
-		"refer": [
-			"pages/info/notice.html",
-			"pages/info/demo.html",
-			"pages/info/helper.html",
-			"pages/info/notify.html"
-		],
-		"priority": 0
-	},
-	"pages/contact/chat.html": {
-		"refer": [
-			"pages/contact/department.html"
-		]
-	},
-	"pages/contact/department.html": {
-		"refer": [
-			"pages/contact/chat.html"
-		]
-	},
-	"pages/contact/group.html": {
-		"refer": [
-			"pages/contact/chat.html",
-			"pages/contact/group_chat.html"
-		]
-	}
+  "main.html": {
+    "resources": [
+      "index.html",
+      "pages/index.html"
+    ],
+    "refer": [
+      "contact.html",
+      "index.html",
+      "setting.html",
+      "chat.html",
+      "pages/index.html",
+      "pages/contact.html",
+      "pages/chat.html",
+      "pages/setting.html",
+      "menu.html"
+    ]
+  },
+  "index.html": {
+    "resources": [
+      "pages/main.html",
+      "css/mui.min.css",
+      "css/iconfont.css",
+      "js/mui.min.js"
+    ],
+    "refer": [
+      "pages/contact.html",
+      "pages/info.html",
+      "menu.html",
+      "pages/main.html"
+    ]
+  },
+  "pages/main.html": {
+    "href": "pages/main.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/iconfont.css"
+    ],
+    "refer": [
+      "pages/team_info.html",
+      "pages/main/qiandao.html"
+    ],
+    "priority": 0
+  },
+  "menu.html": {
+    "href": "menu.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/iconfont.css",
+      "images/trans_black_gradient.png",
+      "js/mui.min.js",
+      "images/page_photo.jpg",
+      "images/avatar.jpg"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "pages/contact.html": {
+    "href": "pages/contact.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.css",
+      "images/icon-boy_gaitubao_com_39x39.png",
+      "images/icon-girl_gaitubao_com_39x39.png"
+    ],
+    "refer": [
+      "pages/contact/chat.html",
+      "pages/contact/department.html",
+      "pages/contact/group.html",
+      "pages/main.html",
+      "pages/contact/contact_list.html"
+    ],
+    "priority": 0
+  },
+  "pages/info.html": {
+    "href": "pages/info.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/iconfont.css"
+    ],
+    "refer": [
+      "pages/info/notice.html",
+      "pages/info/demo.html",
+      "pages/info/helper.html",
+      "pages/info/notify.html"
+    ],
+    "priority": 0
+  },
+  "pages/contact/chat.html": {
+    "refer": [
+      "pages/contact/department.html"
+    ]
+  },
+  "pages/contact/department.html": {
+    "refer": [
+      "pages/contact/chat.html"
+    ]
+  },
+  "pages/contact/group.html": {
+    "refer": [
+      "pages/contact/chat.html",
+      "pages/contact/group_chat.html"
+    ]
+  }
 }

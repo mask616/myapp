@@ -1,0 +1,13 @@
+{
+	"errCode": 200,
+	"errMsg": null,
+	"info":{
+		"time":"",
+		"date":"",
+		"location":""
+	},
+	"sign_rule":{
+		"start_time":"",
+		"end_time":""
+	}	
+}
