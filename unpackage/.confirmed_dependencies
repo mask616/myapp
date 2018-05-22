@@ -39,7 +39,8 @@
     ],
     "refer": [
       "pages/team_info.html",
-      "pages/main/qiandao.html"
+      "pages/main/qiandao.html",
+      "pages/main/waiqin.html"
     ],
     "priority": 0
   },
@@ -91,17 +92,20 @@
   "pages/contact/chat.html": {
     "refer": [
       "pages/contact/department.html"
-    ]
+    ],
+    "resources": []
   },
   "pages/contact/department.html": {
     "refer": [
       "pages/contact/chat.html"
-    ]
+    ],
+    "resources": []
   },
   "pages/contact/group.html": {
     "refer": [
       "pages/contact/chat.html",
       "pages/contact/group_chat.html"
-    ]
+    ],
+    "resources": []
   }
 }
