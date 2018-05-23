@@ -122,9 +122,11 @@
 			},
 			"plugins":{
 				"maps":{
-					"appkey_ios": "ggfYDfsqP9Tlk2VWawaygtzSeXfKENq0",
-					"appkey_android":"5ntbk9lra9G1jBbCarMhaUPv259a5GmU",
-					"description":"百度地图","baidu":{"appkey_ios":"ggfYDfsqP9Tlk2VWawaygtzSeXfKENq0","appkey_android":"5ntbk9lra9G1jBbCarMhaUPv259a5GmU","appkey":"","description":""}
+					"baidu":{
+						"appkey_ios": "ggfYDfsqP9Tlk2VWawaygtzSeXfKENq0",
+						"appkey_android":"5ntbk9lra9G1jBbCarMhaUPv259a5GmU",
+						"description":"百度地图"
+					}
 				}
 			}
 		},"ads":{"rp":false,"splash":false,"push":false},"adid":""
@@ -176,7 +178,9 @@
 				"refer": [
 					"pages/team_info.html",
 					"pages/main/qiandao.html",
-					"pages/main/waiqin.html"
+					"pages/main/waiqin.html",
+					"pages/main/qiandao/qiandao.html",
+					"pages/main/qiandao/test.html"
 				]
 			},
 			"menu.html": {
@@ -248,6 +252,28 @@
 					"pages/contact/chat.html",
 					"pages/contact/group_chat.html"
 				],
+				"priority": 0
+			},
+			"pages/main/qiandao/qiandao.html": {
+				"resources": [],
+				"refer": [
+					"pages/main/qiandao/waiqin.html",
+					"pages/main/qiandao/map.html"
+				],
+				"priority": 0
+			},
+			"pages/main/qiandao/waiqin.html": {
+				"resources": [
+					"pages/main/qiandao/maps_map_sub.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"pages/main/qiandao/map.html": {
+				"resources": [
+					"pages/main/qiandao/maps_map_sub.html"
+				],
+				"refer": [],
 				"priority": 0
 			}
 		},

@@ -5,9 +5,9 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<link href="../../css/mui.min.css" rel="stylesheet" />
-		<link rel="stylesheet" href="../../css/iconfont.css" />
-		<script type="text/javascript" src="../../js/common.js"></script>
+		<link href="../../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../../css/iconfont.css" />
+		<script type="text/javascript" src="../../../js/common.js"></script>
 		<style>
 			#clock,
 			#sign_in li {
@@ -34,7 +34,7 @@
 		<header class="mui-bar mui-bar-nav">
 			<span class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></span>
 			<h1 class="mui-title">签到</h1>
-			<button class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">我的签到</button>
+			<button id="myHistory" class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">我的签到</button>
 		</header>
 		<div id="rule" class="mui-content">
 			<ul class="mui-table-view-cell mui-table-view-divider">
@@ -75,7 +75,7 @@
 						<div class="mui-media-body mui-ellipsis">
 							<h5 style="margin-left: 10px;">外勤打卡</h5>
 						</div>
-						<button class="mui-btn mui-btn-primary mui-pull-right">签到</button>
+						<button id="waiqin" type="button" class="mui-btn mui-btn-primary mui-pull-right">签到</button>
 					</li>
 					<!--<li class="mui-table-view-cell mui-media">
 						<span class="mui-media-object mui-pull-left iconfont icon-qiandao-kaoqindaqia " ></span>
@@ -88,9 +88,9 @@
 				</ul>
 			</div>
 		</div>
-		<script src="../../js/mui.min.js"></script>
-		<script type="text/javascript" src="../../js/immersed.js"></script>
-		<script type="text/javascript" src="../../js/vue.min.js"></script>
+		<script src="../../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../../js/immersed.js"></script>
+		<script type="text/javascript" src="../../../js/vue.min.js"></script>
 		<script type="text/javascript">
 			var poiName = '';
 			/*mui.init();*/
@@ -131,54 +131,34 @@
 					mui.init();
 					//mui  
 					mui.plusReady(function() {
-						/*getGeocode();
+						getGeocode();
 						getTime();
-						getDate();*/
-						plus.geolocation.getCurrentPosition(translatePoint,function(e){
-					        mui.toast("异常:" + e.message);
-					    });
+						getDate();
+
 					});
 				}
 			});
-			
-			//39.9199240000,116.4426920000
-			function translatePoint(position){
-			    var currentLon = position.coords.longitude;
-			    var currentLat = position.coords.latitude;
-			    var gpsPoint = new BMap.Point(currentLon,currentLat);
-			    BMap.Convertor.translate(gpsPoint,2,initMap); //坐标转换
-			}
-			
-			function initMap(point){
-			    map = new BMap.Map("allmap"); //创建地图
-			    map.addControl(new BMap.NavigationControl());
-			    map.addControl(new BMap.ScaleControl());
-			    map.addControl(new BMap.OverviewMapControl());
-			    map.centerAndZoom(point,15);
-			    map.addOverlay(new BMap.Marker(point));
-			 
-			}
 
 			//刷新当前地点
-			/*function refreshLocation() {
+			function refreshLocation() {
 				getGeocode();
 
 			}
-*/
+
 			//绑定页面中当前地点名称
-			/*function geoInf(position) {
+			function geoInf(position) {
 				vue.info.location = position.address.poiName;
 				console.log(JSON.stringify(position));
 			}
-*/
+
 			// 通过定位模块获取位置信息
-			/*function getGeocode() {
+			function getGeocode() {
 				plus.geolocation.getCurrentPosition(geoInf, function(e) {
-					outSet("获取定位位置信息失败：" + e.message);
+					alert("获取定位位置信息失败：" + e.message);
 				}, {
 					geocode: true
 				});
-			}*/
+			}
 
 			//获取当前时间
 			function getTime() {
@@ -210,6 +190,17 @@
 					return(val);
 				}
 			}
+
+			document.getElementById("waiqin").addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'map.html',
+					id: 'map',
+					styles: {
+						top: '-1px',
+						bottom: '0px',
+					}
+				})
+			})
 		</script>
 	</body>
 

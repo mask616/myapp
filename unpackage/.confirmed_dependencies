@@ -40,7 +40,9 @@
     "refer": [
       "pages/team_info.html",
       "pages/main/qiandao.html",
-      "pages/main/waiqin.html"
+      "pages/main/waiqin.html",
+      "pages/main/qiandao/qiandao.html",
+      "pages/main/qiandao/test.html"
     ],
     "priority": 0
   },
@@ -107,5 +109,28 @@
       "pages/contact/group_chat.html"
     ],
     "resources": []
+  },
+  "pages/main/qiandao/qiandao.html": {
+    "refer": [
+      "pages/main/qiandao/waiqin.html",
+      "pages/main/qiandao/map.html"
+    ],
+    "resources": []
+  },
+  "pages/main/qiandao/waiqin.html": {
+    "resources": [
+      "pages/main/qiandao/maps_map_sub.html"
+    ],
+    "refer": [
+      "pages/main/qiandao/maps_map_sub.html"
+    ]
+  },
+  "pages/main/qiandao/map.html": {
+    "resources": [
+      "pages/main/qiandao/maps_map_sub.html"
+    ],
+    "refer": [
+      "pages/main/qiandao/maps_map_sub.html"
+    ]
   }
 }

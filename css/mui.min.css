@@ -1244,7 +1244,7 @@ input[type=submit]:enabled:active {
 	padding-right: 10px;
 	padding-left: 10px;
 	border-bottom: 0;
-	background-color: #f7f7f7;
+	background-color: #0ec1f1;
 	-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .85);
 	box-shadow: 0 0 1px rgba(0, 0, 0, .85);
 	-webkit-backface-visibility: hidden;
@@ -1325,7 +1325,7 @@ input[type=submit]:enabled:active {
 	padding: 0;
 	text-align: center;
 	white-space: nowrap;
-	color: #000
+	color: #FFFFFF
 }
 
 .mui-title a {
@@ -1357,7 +1357,7 @@ input[type=submit]:enabled:active {
 }
 
 .mui-bar-tab .mui-tab-item.mui-active {
-	color: #007aff
+	color: #FFFFFF
 }
 
 .mui-bar-tab .mui-tab-item .mui-icon {
@@ -1410,13 +1410,14 @@ input[type=submit]:enabled:active {
 	line-height: 44px;
 	top: 0;
 	padding: 0;
-	color: #007aff;
+	color: #ffffff;
 	border: 0
 }
 
 .mui-bar .mui-btn-link.mui-active,
 .mui-bar .mui-btn-link:active {
-	color: #0062cc
+	color: #0062cc;
+	
 }
 
 .mui-bar .mui-btn-block {
