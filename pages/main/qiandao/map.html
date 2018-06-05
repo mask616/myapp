@@ -6,83 +6,6 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../../css/mui.min.css" rel="stylesheet" />
-		<!--<script type="text/javascript">
-			var ws = null,
-				wo = null;
-			var em = null,
-				map = null,
-				pcenter = null;
-			// H5 plus事件处理
-			function plusReady() {
-				if(!em || ws) {
-					return
-				};
-				// 获取窗口对象
-				ws = plus.webview.currentWebview();
-				wo = ws.opener();
-				//高德地图坐标为(116.3974357341,39.9085574220), 百度地图坐标为(116.3975,39.9074)
-				pcenter = new plus.maps.Point(116.3975, 39.9074);
-				setTimeout(function() {
-					map = new plus.maps.Map("map");
-					map.centerAndZoom(pcenter, 19);
-					createMarker();
-					// 创建子窗口
-					createSubview();
-				}, 300);
-				// 显示页面并关闭等待框
-				ws.show("pop-in");
-			}
-			if(window.plus) {
-				plusReady();
-			} else {
-				document.addEventListener("plusready", plusReady, false);
-			}
-			// DOMContentloaded事件处理
-			document.addEventListener("DOMContentLoaded", function() {
-				em = document.getElementById("map");
-				window.plus && plusReady();
-			}, false);
-
-			function userLocation() {
-				map.showUserLocation(true);
-				map.getUserLocation(function(state, pos) {
-					if(0 == state) {
-						map.setCenter(pos);
-					}
-				});
-			}
-
-			function createMarker() {
-				//高德地图坐标为(116.3406445236,39.9630878208), 百度地图坐标为(116.347292,39.968716
-				var marker = new plus.maps.Marker(new plus.maps.Point(116.347292, 49.968716));
-				marker.setIcon("../../../images/logo.png");
-				marker.setLabel("HBuilder");
-				var bubble = new plus.maps.Bubble("打造最好的HTML5移动开发工具");
-				marker.setBubble(bubble);
-				map.addOverlay(marker);
-			}
-
-			function createSubview() {
-				// 创建加载内容窗口
-				var topoffset = '44px';
-				if(plus.navigator.isImmersedStatusbar()) { // 兼容immersed状态栏模式
-					topoffset = (Math.round(plus.navigator.getStatusbarHeight()) + 44) + 'px';
-				}
-				var wsub = plus.webview.create('maps_map_sub.html', 'sub', {
-					top: topoffset,
-					height: '60px',
-					position: 'absolute',
-					scrollIndicator: 'none',
-					background: 'transparent'
-				});
-				ws.append(wsub);
-			}
-
-			function resetMap() {
-				//map.centerAndZoom(pcenter,12);
-				map.reset();
-			}
-		</script>-->
 		<link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
 		<style type="text/css">
 			#map {
@@ -107,68 +30,38 @@
 				<div id="map">
 					地图加载中...
 				</div>
-				<div id="POI">
-
-				</div>
 			</div>
 		</header>
 		<script src="../../../js/mui.min.js"></script>
+		<script src="../../../js/waiqin.js"></script>
 		<script type="text/javascript">
-			var map = null;
+			var map = null,
+				search = null,
+				gpsPoint = null;
 			mui.init();
 			mui.plusReady(function() {
 				map = new plus.maps.Map("map", {
 					resizeEnable: true, //缩放显示
-					zoom: 18 //地图显示的缩放级别
+					zoom: 18, //地图显示的缩放级别
 				});
+				map.showZoomControls(false);
 				plus.geolocation.getCurrentPosition(initMap, function(e) {}, {
 					provider: 'baidu',
 					coordsType: 'bd09ll'
 				});
-				var search = new plus.maps.Search(map);
-				var key = ['银行','大厦','医院'];
-				search.poiSearchNearBy(key, new plus.maps.Point(116.442237, 39.920184), 1000);
-
-				search.onPoiSearchComplete = function(state, result) {
-					console.log("onPoiSearchComplete: " + state + " , " + result.currentNumber);
-					if(state == 0) {
-						if(result.currentNumber <= 0) {
-							alert("没有检索到结果");
-						}
-						for(var i = 0; i < result.currentNumber; i++) {
-							var pos = result.getPosition(i);
-							console.log(JSON.stringify(pos));
-						}
-					} else {
-						alert("检索失败");
-					}
-				}
+				
+			search = plus.maps.Search();
 			});
 
 			function initMap(position) {
-				console.log(JSON.stringify(position))
-				var gpsPoint = new plus.maps.Point(position.coords.longitude, position.coords.latitude);
+				console.log(JSON.stringify(position));
+				gpsPoint = new plus.maps.Point(position.coords.longitude, position.coords.latitude);
 				map.centerAndZoom(gpsPoint, 19);
 				var marker = new plus.maps.Marker(gpsPoint); // 创建标注
 				marker.setIcon('../../../images/icon/marker.png');
 				map.addOverlay(marker); // 将标注添加到地图中
 				//map.panTo(gpsPoint);
-
 			}
-
-			var options = {
-				onSearchComplete: function(results) {
-					// 判断状态是否正确
-					if(local.getStatus() == BMAP_STATUS_SUCCESS) {
-						var s = [];
-						for(var i = 0; i < results.getCurrentNumPois(); i++) {
-							//s.push(results.getPoi(i).title + ", " + results.getPoi(i).address);
-							console.log(JSON.stringify(s[i]));
-						}
-						//document.getElementById("r-result").innerHTML = s.join("<br/>");
-					}
-				}
-			};
 		</script>
 	</body>
 
